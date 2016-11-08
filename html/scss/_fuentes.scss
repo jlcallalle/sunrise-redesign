@@ -1,1 +1,21 @@
-// Fuentes
+/* ---------------------------
+    Typography
+   -------------------------- */
+
+@font-face {
+    font-family: 'rugratsregular';
+    src: url('../fonts/rugrats.eot');
+    src: url('../fonts/rugrats.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/rugrats.woff') format('woff'),
+         url('../fonts/rugrats.ttf') format('truetype'),
+         url('../fonts/rugrats.svg#rugratsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial_rounded_bold';
+    src: url('../fonts/Arial_rounded_bold.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
