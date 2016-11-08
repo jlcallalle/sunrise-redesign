@@ -1,0 +1,33 @@
+{
+  "name": "core-frontend",
+  "version": "1.0",
+  "authors": [
+    "Jorge Callalle Torres <jlcallalle@gmail.com>"
+  ],
+  "description": "Core para comenzar un proyecto de front-end",
+  "main": "index.html",
+  "keywords": [
+    "Front end",
+    "core",
+    "html5",
+    "scss",
+    "css3",
+    "jade",
+    "js"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "componentes",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "normalize-scss": "~3.0.3",
+    "sass-mediaqueries": "~1.5.1"
+  }
+}

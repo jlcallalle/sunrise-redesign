@@ -1,0 +1,285 @@
+doctype html
+// paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='en')  
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8(lang='en')  
+//if IE 8
+  html.no-js.lt-ie9(lang='en')  
+// Consider adding a manifest.appcache: h5bp.com/d/Offline
+// [if gt IE 8] <!
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    //
+      Use the .htaccess and remove these lines to avoid edge case issues.
+      More info: h5bp.com/i/378
+    //if IE 
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title
+      | Sunrise
+    meta(name='description', content='Sunrise es un centro médico especializado en atender a los más pequeños. Brindamos atención de primer nivel en una larga lista de especialidades, sobre todo en el área de Neumología Pediátrica.')
+    meta(name='keywords', content='sunrise, Medicina, salud, Medicina Pediátrica, Especialidades, Neumologia , Pediatria General, Gastroenterología Pediátrica, Nefrología Pediátrica, Endocrinologia Pediatrica, Terapia Respiratoria, Pruebas de función pulmonar, Psicología Infantil, Dermatologia, centro de especialidad, neumologo pediatrico, sunrise medicinal, medicina para niños, sunriseperu, sunrise peru, sunrise hospital, sunrise clinica, Neumologia, Pediatrica')
+    meta(name='author', content='Sunrise')
+    meta(name='distribution', content='Global')
+    meta(name='robots', content='FOLLOW,INDEX')
+    meta(property='og:title', content='Sunrise Medicina')
+    meta(property='og:description', content='Medicina Pediátrica y Especialidades')
+    link(rel='shortcut icon', type='image/x-icon', href='http://sunrise.pe/wp-content/themes/sunrise/favicon.ico')
+    // Mobile viewport optimized: h5bp.com/viewport
+    meta(name='keywords', content='Medicina Pediatrica y especialidades')
+    // <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    link(rel='stylesheet', href='http://sunrise.pe/wp-content/themes/sunrise/style.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='http://sunrise.pe/wp-content/themes/sunrise/css/base.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='http://sunrise.pe/wp-content/themes/sunrise/css/animate.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='http://sunrise.pe/wp-content/themes/sunrise/js/flexslider/flexslider.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='http://sunrise.pe/wp-content/themes/sunrise/js/selectbox/css/sexy-combo.css', type='text/css')
+    link(rel='stylesheet', href='http://sunrise.pe/wp-content/themes/sunrise/js/fancybox2/jquery.fancybox.css?v=2.1.5', media='screen')
+    link(rel='stylesheet', href='http://sunrise.pe/wp-content/themes/sunrise/css/layout.css', type='text/css', media='screen')
+    meta(property='og:url', content='http://sunrise.pe/')
+    meta(property='og:title', content='Sunrise')
+    meta(property='og:description', content='Medicina Pediatrica y especialidades')
+    meta(property='og:type', content='article')
+    meta(property='og:image', content='http://sunrise.pe/wp-content/themes/sunrise/images/logo-facebook-icon.jpg')
+    link(rel='alternate', type='application/rss+xml', title='Sunrise » Feed', href='http://sunrise.pe/feed/')
+    link(rel='alternate', type='application/rss+xml', title='Sunrise » RSS de los comentarios', href='http://sunrise.pe/comments/feed/')
+    script(type='text/javascript').
+      window._wpemojiSettings = {"baseUrl":"http:\\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/sunrise.pe\/wp-includes\/js\/wp-emoji-release.min.js?ver=20ab0eb8c5747ac6889c109fa4cf3b4b"}};
+      !function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+    style(type='text/css').
+      img.wp-smiley,
+      img.emoji {
+      display: inline !important;
+      border: none !important;
+      box-shadow: none !important;
+      height: 1em !important;
+      width: 1em !important;
+      margin: 0 .07em !important;
+      vertical-align: -0.1em !important;
+      background: none !important;
+      padding: 0 !important;
+      }
+    link#bwg_frontend-css(rel='stylesheet', href='http://sunrise.pe/wp-content/plugins/photo-gallery/css/bwg_frontend.css?ver=1.2.15', type='text/css', media='all')
+    link#bwg_font-awesome-css(rel='stylesheet', href='http://sunrise.pe/wp-content/plugins/photo-gallery/css/font-awesome/font-awesome.css?ver=4.2.0', type='text/css', media='all')
+    link#bwg_mCustomScrollbar-css(rel='stylesheet', href='http://sunrise.pe/wp-content/plugins/photo-gallery/css/jquery.mCustomScrollbar.css?ver=1.2.15', type='text/css', media='all')
+    script(type='text/javascript', src='http://sunrise.pe/wp-includes/js/jquery/jquery.js?ver=1.11.2')
+    script(type='text/javascript', src='http://sunrise.pe/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/plugins/photo-gallery/js/bwg_frontend.js?ver=1.2.15')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/plugins/photo-gallery/js/jquery.mobile.js?ver=1.2.15')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/plugins/photo-gallery/js/jquery.mCustomScrollbar.concat.min.js?ver=1.2.15')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/plugins/photo-gallery/js/jquery.fullscreen-0.4.1.js?ver=0.4.1')
+    script(type='text/javascript').
+      /* <![CDATA[ */
+      var bwg_objectL10n = {"bwg_field_required":"Se requiere campo. ","bwg_mail_validation":"Esto no es una direcci\\u00f3n de correo electr\u00f3nico v\u00e1lida.","bwg_search_result":"No hay im\u00e1genes que coinciden con su b\u00fasqueda."};
+      /* ]]> */
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/plugins/photo-gallery/js/bwg_gallery_box.js?ver=1.2.15')
+    link(rel='EditURI', type='application/rsd+xml', title='RSD', href='http://sunrise.pe/xmlrpc.php?rsd')
+    link(rel='wlwmanifest', type='application/wlwmanifest+xml', href='http://sunrise.pe/wp-includes/wlwmanifest.xml')
+    script(type='text/javascript').
+      (function(url){
+      if(/(?:Chrome\\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+      var addEvent = function(evt, handler) {
+      if (window.addEventListener) {
+      document.addEventListener(evt, handler, false);
+      } else if (window.attachEvent) {
+      document.attachEvent('on' + evt, handler);
+      }
+      };
+      var removeEvent = function(evt, handler) {
+      if (window.removeEventListener) {
+      document.removeEventListener(evt, handler, false);
+      } else if (window.detachEvent) {
+      document.detachEvent('on' + evt, handler);
+      }
+      };
+      var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+      var logHuman = function() {
+      var wfscr = document.createElement('script');
+      wfscr.type = 'text/javascript';
+      wfscr.async = true;
+      wfscr.src = url + '&r=' + Math.random();
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+      for (var i = 0; i < evts.length; i++) {
+      removeEvent(evts[i], logHuman);
+      }
+      };
+      for (var i = 0; i < evts.length; i++) {
+      addEvent(evts[i], logHuman);
+      }
+      })('//sunrise.pe/?wordfence_logHuman=1&hid=EEA622F7091A95A6461D9AABB510104E');
+    style(type='text/css').
+      .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+    script(src='http://code.jquery.com/jquery-1.9.1.min.js')
+    script(src='http://code.jquery.com/jquery-migrate-1.1.0.min.js')
+    script(type='text/javascript').
+      if (typeof jQuery == 'undefined')
+      {
+      document.write(unescape("%3Cscript src='http://sunrise.pe/wp-content/themes/sunrise/js/jquery-1.8.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+      }
+    //if lt IE 9
+      link(rel='stylesheet', href='http://sunrise.pe/wp-content/themes/sunrise/css/ie-only.css', type='text/css', media='screen')
+      script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/selectivizr.js')
+      script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/css3-mediaqueries.js')
+    script(src='http://sunrise.pe/wp-content/themes/sunrise/js/modernizr.js')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/normalize.js')
+    style.
+  body.home.blog
+    // Start wrapper
+    .wrapper.neumologia-pediatrica
+      header.header.container
+        .clearfix.header_inner
+          .content_menu.clearfix
+            .main_menu
+              a.vertical_text.navi0(href='http://sunrise.pe/quienes-somos/') Quiénes Somos
+              a.vertical_text.navi1(href='http://sunrise.pe/neumologia-pediatrica/') Neumología Pediátrica
+              a.vertical_text.navi2(href='http://sunrise.pe/especialidades/') Especialidades
+              a.vertical_text.navi3(href='http://sunrise.pe/infraestructuras') Infraestructura
+              a.vertical_text.navi4(href='http://sunrise.pe/consejos-y-noticias/') Consejos y Noticias
+              a.vertical_text.navi5(href='http://sunrise.pe/citas-en-linea/') Citas en Línea
+          .content_clound.clearfix
+            a.inicio(href='http://sunrise.pe/')
+            a(title='http://sunrise.pe', href='http://sunrise.pe/')
+              img#casita(src='http://sunrise.pe/wp-content/themes/sunrise/images/casita.png')
+            .cloud
+            .pajarito
+              img#notamusical(src='http://sunrise.pe/wp-content/themes/sunrise/images/notamusical.png')
+            .red-social
+              a(href='https://twitter.com/Sunrise_CP', target='_blank')
+                img#icotwitter(src='http://sunrise.pe/wp-content/themes/sunrise/images/icotwitter.png')
+              a(href='https://www.facebook.com/SunriseCentroPediatrico', target='_blank')
+                img#icofacebook(src='http://sunrise.pe/wp-content/themes/sunrise/images/icofacebook.png')
+            h1.logo_image
+              a(title='http://sunrise.pe', href='http://sunrise.pe/')
+                img#logo.image_no_margin.fadeInDown.animated(alt='', src='http://sunrise.pe/wp-content/themes/sunrise/images/logo.png')
+      .content_slider
+        .flexslider
+          ul.slides
+            li
+              img(src='http://sunrise.pe/wp-content/themes/sunrise/images/home1.jpg')
+            li
+              img(src='http://sunrise.pe/wp-content/themes/sunrise/images/home2.jpg')
+            li
+              img(src='http://sunrise.pe/wp-content/themes/sunrise/images/home3.jpg')
+      // Start content
+      .container.main.clearfix
+        .iconos
+        .clearfix.content
+          .clearfix.content_inner
+            .hfeed.main_content
+              .clearfix.main_content_inner
+                .content_left.clearfix
+                  .content_left_inner
+                    // mostrar contenido de la pagina 45 | home
+                    h2.title_rugrats Bienvenidos
+                    p
+                      | Los especialistas del centro pediátrico Sunrise entendemos que su principal preocupación es la salud de los niños. Es por ello que hemos reunido a un grupo de profesionales médicos altamente especializados para cuidarlos, prevenir posibles enfermedades y tratarlos integralmente.
+                    p
+                      | La experiencia de cada miembro de nuestro staff, los equipos médicos y los consultorios que hemos implementado nos permite garantizarle la tranquilidad que necesita. 
+                      a.link_home(href='http://sunrise.pe/citas-en-linea/', target='_blank')  Comuníquese con nosotros 
+                      | para empezar a ocuparnos juntos por la buena salud de los menores.
+                    //
+                      <p>Los especialistas del centro pediátrico Sunrise entendemos que su principal preocupación es la salud de los niños. Es por ello que hemos reunido a un grupo de profesionales médicos altamente especializados para cuidarlos, prevenir posibles enfermedades y tratarlos integralmente. </p>
+                      <p>La experiencia de cada miembro de nuestro staff, los equipos médicos y los consultorios que hemos implementado nos permite garantizarle la tranquilidad que necesita. <a class="link_home" href="/contactos/" target="_blank"> Comuníquese con nosotros </a> para empezar a ocuparnos juntos por la buena salud de los menores. </p>
+                    h2.noticia_rugrats Consejos y Noticias
+                    h3.title_second Enfermedades típicas del invierno en niños y cómo prevenirlas
+                    .content_consejo.clearfix
+                      .number
+                        em
+                          strong
+                            | Los resfríos, las faringitis y la tos son las molestias más comunes con las que llegan a consulta los padres. Sepa cómo alejarlas de sus pequeños.
+                      p
+                        .number
+                        .number
+                        .number
+                        .number
+                        .parrafo
+                          p
+                            | El frío empieza a imponerse, los rayos solares cada vez son más esporádicos y es
+                    //
+                      <h3 class="title_second">SU MÉDICO LE ACONSEJA: PRECAUCIONES PARA LA PRIMAVERA</h3>
+                      <h4 class="titulo_consejo">¿CADA ESTACIÓN TRAE SUS PROPIAS TENDENCIAS A CIERTAS ENFERMEDADES?</h4>
+                      <p>Desde luego. Las enfermedades más frecuentes en invierno –resfríos-, pueden diferir de las producidas en verano –diarreas-. Pero no olvidemos que estas están presentes durante todo el año. Además, por la geografía de nuestro país, los niños que realizan paseos en invierno en zonas de altura pueden tener insolación y resequedad de la piel que vemos típicamente en verano. </p>
+                    a.link(href='http://sunrise.pe/consejo/') Ver Consejos
+                    .contenido_inner
+                      .content_noticias
+                        h3.title_second ¡FELIZ ANIVERSARIO! SUNRISE CUMPLE 1 AÑO CON SUMA ALEGRÍA
+                        p
+                          a(href='http://sunrise.pe/wp-content/uploads/2014/10/collage-modificado.jpg')
+                            img.alignnone.wp-image-286(src='http://sunrise.pe/wp-content/uploads/2014/10/collage-modificado-1024x753.jpg', alt='collage-modificado', width='391', height='288')
+                      .content_noticias
+                        p
+                          | Este 4 de noviembre cumplimos nuestro primer año. Un año de muchas experiencias y gratos momentos que nos genera el sentimiento más profundo de satisfacción, pues todo primer año marca un antes y un después. Marca las bases de lo que
+                      //
+                        <h3 class="title_second">LLEGÓ SUNRISE, EL CENTRO MÉDICO ESPECIALIZADO PARA SUS NIÑOS</h3>
+                        <p>Luego un año y medio de constante trabajo, el centro pediátrico Sunrise está cerca a comenzar sus atenciones médicas especializadas en Surco. </p>
+                        <p>El martes 4 de noviembre será la inauguración de un local que ha sido pensado desde el plano científico y desde la perspectiva pediátrica. Nos hemos dedicado a que Sunrise sea un lugar accesible para los niños y que cuente con médicos y tecnología para una atención integral. </p>
+                        <p>Parte de este trabajo también ha contado con el aporte de la artista Diana Aguilar y la arquitecta Olenka Marquina, con quienes hemos logrado ese clima amable y cercano en nuestros consultorios. </p>
+                        <p>Sunrise aparece como un centro especializado en la neumología pediátrica y con médicos con amplia trayectoria en todas las áreas pediátricas. La mejor atención pediátrica está por llegar.</p>
+                      a.link(href='http://sunrise.pe/noticias/') Ver Noticias
+                .content_right.clearfix
+                  .content_right_inner
+                    a.separa(href='http://sunrise.pe/contactenos/')
+                    .cloud_footer
+                    .texto
+                      a.email(href='mailto:jjugo@sunrise.pe') sunrisepediatria@sunrise.pe
+                      .address Av. Benavides 4887 Of. 201 -  Surco
+                      .fono
+                        | Telf: 2751124 
+                        br
+                        |    Cel: 945395469
+          // End content_inner
+        // End content
+      footer.footer.container.clearfix
+        .clearfix.footer_inner
+          ul.lista_footer.list_reset.clearfix
+            li
+              a(href='http://sunrise.pe/quienes-somos/') Quiénes Somos
+            li
+              a(href='http://sunrise.pe/') Neumología Pediátrica
+            li
+              a(href='http://sunrise.pe/') Especialidades
+            li
+              a(href='http://sunrise.pe/infraestructuras/') Infraestructura
+            li
+              a(href='http://sunrise.pe/consejos-y-noticias/') Noticias
+            li
+              a(href='http://sunrise.pe/citas-en-linea/') Citas en Línea
+          .derechos
+            p SunRise© 2015 | Todos los Derechos Reservados 
+        .tren.fadeInDown.animated
+        // <div class="tren animated wow fadeInRight" data-wow-delay=".5s"></div>
+      // </div>
+    // End wrapper
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/validate/jquery.validate.min.js')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/validate/messages_es.js')
+    script(type='text/javascript').
+      /* Important Delete if contact.js is active */
+      jQuery(function() {
+      jQuery('#contact_form').validate();
+      });
+    // Add fancyBox 2 main JS and CSS files
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/fancybox2/jquery.fancybox.js?v=2.1.5')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/fancybox2/helpers/jquery.fancybox-media.js?v=1.0.6')
+    // <script type="text/javascript" src="/js/modals.js"></script>
+    script(type='text/javascript').
+      jQuery(document).ready(function() {
+      jQuery(".fancybox").fancybox({
+      padding: 0 ,// remove white border
+      beforeShow: function(){
+      jQuery(".fancybox-skin").css("backgroundColor","transparent");
+      }
+      });
+      });
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/screen.js')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/jquery.placeholder.js')
+    script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/flexslider/jquery.flexslider-min.js')
+    script(type='text/javascript').
+      $(window).load(function() {
+      $('.flexslider').flexslider({
+      });
+      });
+    script(type='text/javascript').
+      jQuery(function() {
+      jQuery('input, textarea').placeholder();
+      });
