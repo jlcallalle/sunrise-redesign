@@ -7,13 +7,13 @@ html(lang='es')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='shortcut icon', href='images/favicon.png', type='image/png')
         link(rel='stylesheet', href='css/main.css')
+        script(src='http://code.jquery.com/jquery-1.9.1.min.js')
 
-    body
-        include ../includes/header
-
+    body.home.blog
+        //- include ../includes/header
         block content
-    
-        include ../includes/footer
+        //- include ../includes/footer
 
         script(src='js/min/recursos.min.js')
         script(src='js/main.js')
+        script(type='text/javascript', src='http://sunrise.pe/wp-content/themes/sunrise/js/flexslider/jquery.flexslider-min.js')
