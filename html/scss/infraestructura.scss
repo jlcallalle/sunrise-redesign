@@ -1,0 +1,30 @@
+/* ---------------------------
+    Infraestructura
+   --------------------------- */
+
+.lista_infraestructura li {
+    float: left;
+    margin: 10px 15px 10px 0;
+    width: 189px;
+}
+
+.lista_infraestructura li:hover h4{
+    color: rgb(228, 136, 15);
+    text-decoration: underline;
+}
+
+.lista_infraestructura li:nth-child(even) {
+    float: left;
+    margin-right: 0;
+    width: 189px;
+}
+
+
+.img-infraestructura {
+    width: 178px;
+    height: 122px;
+    border-radius: 20px;
+    border: 4px solid #1dbec4;
+    margin-right: 23px;
+    margin-top: 23px;
+}

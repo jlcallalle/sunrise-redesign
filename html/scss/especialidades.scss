@@ -1,0 +1,147 @@
+
+/* ---------------------------
+    SECCION Especialidades
+   --------------------------- */
+   .cuadro-especialidades-izquierda{
+
+
+width: 189px;
+float: left;
+margin-right: 15px;
+margin-top: 20px;
+background: rgba(255,0,0,0.2);
+
+}
+
+p.titulo-especialidad:hover {
+color: rgb(228, 136, 15);
+}
+
+   .cuadro-especialidades-derecha{
+
+
+width: 189px;
+float: right;
+margin-top: 20px;
+margin-right: -8px;
+background: rgba(0,0,255,0.2);
+
+}
+
+
+
+   p.titulo-especialidad {
+text-align: center;
+font-weight: bold;
+color: #299824;
+
+}
+
+
+
+/* ---------------------------
+    SECCION Especialidades
+   --------------------------- */
+
+
+   h4.nombre-especialidad {
+color: #37B0E8;
+text-decoration: underline;
+font-size: 18px;
+font-weight: normal;
+line-height: 25px;
+}
+
+
+p.nombre-doctor {
+font-size: 14px;
+font-weight: bold;
+text-align: left;
+}
+
+.foto-doctor {
+float: right;
+margin-left: 14px;
+}
+
+p.cmp {
+background-color: #C1EEFF;
+
+}
+
+p.rne {
+background-color: #FFB858;
+
+}
+
+
+
+p.rne, p.cmp {
+
+    font-size: 11px;
+    padding: 5px 7px 4px 10px;
+    width: 70px;
+    border-radius: 9px;
+    margin-top: 14px;
+    text-align: left;
+
+}
+
+ul.trayectoria {
+text-align: justify;
+margin-left: 7px;
+list-style-image: url("../images/vineta.png");
+}
+
+
+li.vineta {
+margin-top: 10px;
+}
+
+.volver-atras {
+float: right;
+background-color: #46BB41;
+padding: 9px;
+border-radius: 5px;
+font-weight: bold;
+margin-top: 20px;
+}
+
+
+.galeria-consutorio {
+
+width: 422px;
+
+
+}
+
+.img-consultorio {
+width: 178px;
+height: 122px;
+border-radius: 20px;
+border: 4px solid #1dbec4;
+margin-right: 23px;
+margin-top: 23px;
+}
+
+.titulo_consejo {
+
+font-weight: bold;
+}
+
+.number {
+
+font-weight: bold;
+}
+
+a.verpost {
+
+    float: right;
+    background-color: #14B8B3;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 307px;
+    margin-bottom: 20px;
+    color: white;
+
+}

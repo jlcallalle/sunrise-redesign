@@ -1,0 +1,62 @@
+.content_slider {
+  border:1px solid yellow;
+}
+
+/*Styles home*/
+.content_slider {
+	margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.content_slider img {
+	width: 100%;
+	overflow: hidden;
+}
+
+.header h1 {
+    float: right;
+    margin: 0 0 1em;
+    padding: 10px 140px 0 0;
+}
+
+.header_inner {
+	padding: 15px 0;
+}
+
+/* ---------------------------
+    Quitar Slider
+   --------------------------- */
+.quienes-somos  .content_slider , .neumologia-pediatrica .content_slider,
+.consultorios  .content_slider , .consejos-y-noticias .content_slider ,
+.infraestructura .content_slider,  .noticias-y-consejos .content_slider ,
+.parent-pageid-22  .content_slider, .consejos  .content_slider,
+ .noticias .content_slider {
+    display:none;
+}
+
+.content p {
+    text-align: justify;
+}
+
+.home  .content_slider {
+    display: block!important;
+}
+
+
+.flexslider {
+  border:none;
+  box-shadow:none;
+}
+
+.flex-direction-nav a {
+  background: url(../images/bg_direction_nav.png) no-repeat 0 0;
+}
+
+.jorge {
+  border:1px solid orange;
+  .callalle {
+    border:1px solid red;
+  }
+}

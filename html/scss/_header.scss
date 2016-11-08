@@ -1,0 +1,160 @@
+.header {
+  border:2px solid yellow;
+  @include min-screen($tablet-l) {
+    border:2px solid blue;
+  }
+}
+
+
+.header {
+	position: relative;
+	z-index: 100;
+}
+
+.inicio {
+    background: url("../images/cuerda.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 74px;
+    left: 337px;
+    position: absolute;
+    top: 0;
+    width: 53px;
+}
+
+.facebook {
+    background: none repeat scroll 0 0 transparent;
+    height: 35px;
+    position: absolute;
+    right: 467px;
+    top: 93px;
+    width: 35px;
+    -moz-transform: scale(1) rotate(-15deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-webkit-transform: scale(1) rotate(-15deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-o-transform: scale(1) rotate(-15deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-ms-transform: scale(1) rotate(-15deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+transform: scale(1) rotate(-15deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+
+
+.twitter {
+    background: none repeat scroll 0 0 transparent;
+    height: 35px;
+    position: absolute;
+    right: 437px;
+    top: 94px;
+    width: 35px;
+    -moz-transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-webkit-transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-o-transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-ms-transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+
+
+.logo_image img {
+    position: relative;
+    z-index: 10;
+}
+
+.logo_image a {
+    display: block;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -moz-transition: transform 0.5s ease 0s;
+    -webkit-transition: transform 0.5s ease 0s;
+    -o-transition: transform 0.5s ease 0s;
+    -ms-transition: transform 0.5s ease 0s;
+    transition: transform 0.5s ease 0s;
+}
+
+.logo_image a:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.cloud {
+    background: url("../images/cloud3.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 226px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 555px;
+}
+
+/* ---------------------------
+    Menu
+   --------------------------- */
+
+.content_menu {
+	background: rgba(255,0,0,0.1);
+	width: 273px;
+	float: left;
+}
+
+
+
+.main_menu {
+    position: relative;
+}
+
+
+.vertical_text {
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-size: 17px;
+    height: 42px;
+    line-height: 37px;
+    position: absolute;
+    text-align: center;
+    top: 182px;
+   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+	 -webkit-transform-origin:left top 0;
+	 -moz-transform-origin:left top 0;
+	-ms-transform-origin:left top 0;
+	o-transform-origin:left top 0;
+    transform-origin: left top 0;
+    width: 197px;
+    text-shadow: -1px 2px 18px rgba(150, 150, 150, 1);
+
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-ttransition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.vertical_text:hover {
+	color: #000;
+	text-decoration: none;
+	color:#fff;
+}
+
+
+.vertical_text:hover {
+    width: 250px;
+}
+
+
+.navi0 { left: 0; }
+.navi1 { left: 50px; }
+.navi2 {left: 92px; }
+.navi3 { left: 134px; }
+.navi4 { left: 177px; }
+.navi5 { left: 226px; }
+.navi0:hover { background: #62B1EC; }
+.navi1:hover { background: #e0a708; width: 218px; }
+.navi2:hover { background: #be0713; }
+.navi3:hover { background: #06837e; }
+.navi4:hover { background: #d07802; width: 221px; }
+.navi5:hover { background: #208e1b; }

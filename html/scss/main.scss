@@ -1,22 +1,44 @@
 // Librerias sass
+@import '../componentes/normalize-scss/normalize';
+@import '../componentes/sass-mediaqueries/media-queries';
 
 @import '../componentes/base';
 @import '../componentes/animate';
 @import '../componentes/flexslider';
 @import '../componentes/sexy-combo';
 @import '../componentes/jquery.fancybox';
-@import '../componentes/layout';
+// @import '../componentes/layout';
 
 // Dependecias del proyecto
 @import 'variables';
 @import 'ayudas';
 @import 'fuentes';
 
-// Dependecias JS
 
+// Section
+@import 'generales';
+@import 'header';
+@import 'slider';
+@import 'quienes';
+@import 'contactos';
+@import 'cita';
+@import 'neumologia';
+@import 'consejos';
+@import 'contactenos';
+@import 'especialidad';
+@import 'infraestructura';
+@import 'especialidades';
+@import 'footer';
 // Patrones
-//@import 'generales';
 
-// Secciones
-
-//base.css
+// @import 'generales';
+// @import 'header-sitio';
+// @import 'portada';
+// @import 'slider';
+// @import 'bienvenido';
+// @import 'quienes';
+// @import 'servicios';
+// @import 'proyectos';
+// @import 'clientes';
+// @import 'formulario';
+// @import 'footer';

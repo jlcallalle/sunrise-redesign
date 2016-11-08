@@ -1,0 +1,30 @@
+/* ---------------------------
+    Especialidad
+   --------------------------- */
+
+.lista_especialidad li {
+    float: left;
+    margin: 10px 15px 10px 0;
+    width: 189px;
+}
+
+.lista_especialidad li:hover h4{
+    color: rgb(228, 136, 15);
+    text-decoration: underline;
+}
+
+/*.lista_especialidad li:nth-child(2n+2)*/
+.lista_especialidad li:nth-child(even) {
+    float: left;
+    margin-right: 0;
+    width: 189px;
+}
+
+
+
+.box h4 {
+    color: #299824;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}

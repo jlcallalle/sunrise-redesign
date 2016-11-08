@@ -1,0 +1,44 @@
+/* ---------------------------
+    Neumologia Pediatrica
+   --------------------------- */
+
+.texto_comillas {
+    background: url("../images/comi_left.png") no-repeat scroll left 7px, url("../images/comi_righ.png") no-repeat scroll right 34px rgba(0, 0, 0, 0);
+    padding: 4px 0 8px 0px;
+}
+.texto_comillas p {
+    font-size: 12px;
+    font-style: italic;
+    padding: 0 41px;
+}
+
+
+.title_especial {
+    color: #3ba936;
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding: 1px 0 0;
+}
+
+
+
+.img_neumologia {
+    float: left;
+}
+
+
+.tipos p.tipop {
+    float: left;
+    width: 210px;
+}
+
+
+.tipos img {
+    padding: 9px 0 0 0;
+    margin: 0 0 0 10px;
+}
+
+
+.green_wrong {
+    color: #029994;
+}

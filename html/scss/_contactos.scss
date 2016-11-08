@@ -1,0 +1,53 @@
+/* ---------------------------
+    Contactos
+   --------------------------- */
+
+
+.contentido_formulario_inner {
+    padding: 15px 0 0;
+}
+
+label.label {
+    display: block;
+    font-size: 13px;
+    position: 0 0 3px 0;
+}
+
+
+
+.contentido_formulario input, .contentido_formulario textarea {
+    border-radius: 6px;
+    margin: 4px 0 0;
+    padding: 6px;
+    width: 380px;
+
+}
+
+
+.content_label {
+    margin: 0 0 20px 0;
+}
+.contentido_formulario textarea {
+    height: 74px;
+}
+
+
+.btn_aceptar {
+    background: none repeat scroll 0 0 #1597e2;
+    border: 1px solid #5fc6fb;
+    color: #fff;
+    cursor: pointer;
+    padding: 7px 24px;
+    vertical-align: bottom;
+    float: right;
+    border-radius: 8px;
+}
+
+.btn_aceptar:hover {
+    background: #2189c5;
+}
+
+
+label.error {
+    color: #ff0000;
+}
