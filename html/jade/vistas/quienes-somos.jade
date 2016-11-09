@@ -1,0 +1,39 @@
+extends ../plantillas/plantilla-principal
+
+block title
+    -var proyecto = {nombre: 'Sunrise', seccion: 'Quienes Somos'}
+    title #{proyecto.nombre} | #{proyecto.seccion}
+
+block description
+    meta(name='description', content='Descripción de la página')
+block content
+    .container.main.clearfix
+      .iconos
+      .clearfix.content
+        .clearfix.content_inner
+          .hfeed.main_content
+            .clearfix.main_content_inner
+              .content_left.clearfix
+                .content_left_inner
+                  .main_quienes_somos
+                    h2.title_rugrats Quienes Somos 
+                    p
+                      | Sunrise es un centro médico especializado en atender a los más pequeños. Brindamos atención de primer nivel en una larga lista de especialidades, sobre todo en el área de Neumología Pediátrica, lo que nos convierte en una clínica de vanguardia.
+                    p
+                      | Hemos adecuado un espacio amigable para los niños que cuente con los equipos indispensables para garantizarle un buen servicio.
+                    p
+                      | En Sunrise sabemos que además de médicos expertos y material de última generación necesita ser atendido a la brevedad, por lo que nuestros mecanismos de atención, tanto por teléfono o mail, están a su disposición
+                    p
+                      a(href='http://sunrise.pe/wp-content/uploads/2014/08/quienes_img2.png')
+                        img.alignnone.wp-image-106.size-full(src='http://sunrise.pe/wp-content/uploads/2014/08/quienes_img2.png', alt='', width='411', height='306')
+              .content_right.clearfix
+                .content_right_inner
+                  a.separa(href='http://sunrise.pe/contactenos/')
+                  .cloud_footer
+                  .texto
+                    a.email(href='mailto:jjugo@sunrise.pe') sunrisepediatria@sunrise.pe
+                    .address Av. Benavides 4887 Of. 201 -  Surco
+                    .fono
+                      | Telf: 2751124 
+                      br
+                      |    Cel: 945395469
