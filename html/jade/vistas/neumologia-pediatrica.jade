@@ -1,0 +1,53 @@
+extends ../plantillas/plantilla-principal
+
+block title
+    -var proyecto = {nombre: 'Sunrise', seccion: 'Quienes Somos'}
+    title #{proyecto.nombre} | #{proyecto.seccion}
+
+block description
+    meta(name='description', content='Descripción de la página')
+block content
+    .container.main.clearfix
+      .iconos
+      .clearfix.content
+        .clearfix.content_inner
+          .hfeed.main_content
+            .clearfix.main_content_inner
+              .content_left.clearfix
+                .content_left_inner
+                  .main_neumologia
+                    // <h2 class="title_rugrats"> </h2>
+                    h2.title_rugrats Neumologia Pediatrica
+                    .texto_comillas
+                      p
+                        | Esta es la disciplina estrella de nuestra clínica pediátrica. Es por eso que queremos resolver algunas dudas y asegurarle la calidad de nuestros profesionales.
+                    h3.title_especial ¿QUÉ ES UN NEUMÓLOGO PEDIATRA?
+                    p
+                      | Un niño con problemas respiratorios  no solo necesita la atención de un pediatra general. Un neumólogo pediatra diagnostica, trata y hace seguimiento a los niños desde el nacimiento hasta los 21 años de edad para evaluar la condición de su enfermedad.
+                    h3.title_second ¿QUÉ TIPOS DE ENFERMEDADES SE ATIENDEN EN ESTA ESPECIALIDAD?
+                    .tipos.clearfix
+                      p.tipop
+                        | Los principales son: La tos crónica, la dificultad respiratotia  por neumonías recurrentes que provoca la infección de los pulmones, problemas bronquiales y de las vías respiratorias. El neumólogo pediatra diagnostica y controla el asma en los niños, trata enfermedades congénitas y genéticas relacionadas como la fibrosis quística.
+                      p
+                        a(href='http://sunrise.pe/wp-content/uploads/2014/08/neumologia-pediatrica.png')
+                          img.alignnone.size-full.wp-image-125(src='http://sunrise.pe/wp-content/uploads/2014/08/neumologia-pediatrica.png', alt='neumologia-pediatrica', width='172', height='156')
+                    h3.title_second.green_wrong ¿QUÉ TIPO DE FORMACIÓN TIENEN LOS NEUMÓLOGOS PEDIATRAS?
+                    p
+                      | Los médicos de esta especialidad han tenido al menos tres años de residencia hospitalaria en el área de Pediatría y al menos dos años más de formación en rama de Neumología Pediátrica con la debida certificación de una universidad y del Colegio Médico del Perú. Todos los especialistas cuentan con un Registro Nacional de Especialista Pediatra y Registro Nacional de Sub Especialista Neumólogo Pediatra.
+                    h3.title_second ¿POR QUÉ ES IMPORTANTE SER ATENDIDO POR UN NEUMÓLOGO PEDIATRA?
+                    p
+                      | Estos especialistas son la mejor alternativa para el cuidado de los niños, preadolescentes y adolescentes, quienes no son sólo pequeños adultos. Sus cuerpos están creciendo y tienen necesidades médicas. Generalmente expresan sus preocupaciones de manera diferente al de los adultos y siempre no pueden contestar preguntas médicas. Los médicos de esta rama saben cómo examinar y tratar a niños y adolescentes de una manera que les ayude a relajarse y ayuden con el tratamiento.
+                    p
+                      a(href='http://sunrise.pe/wp-content/uploads/2014/08/doctora_neumologia.png')
+                        img.alignnone.wp-image-127.size-full(src='http://sunrise.pe/wp-content/uploads/2014/08/doctora_neumologia.png', alt='doctora_neumologia', width='403', height='210')
+              .content_right.clearfix
+                .content_right_inner
+                  a.separa(href='http://sunrise.pe/contactenos/')
+                  .cloud_footer
+                  .texto
+                    a.email(href='mailto:jjugo@sunrise.pe') sunrisepediatria@sunrise.pe
+                    .address Av. Benavides 4887 Of. 201 -  Surco
+                    .fono
+                      | Telf: 2751124 
+                      br
+                      |    Cel: 945395469
