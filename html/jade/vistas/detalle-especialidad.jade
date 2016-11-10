@@ -1,0 +1,74 @@
+extends ../plantillas/plantilla-principal
+
+block title
+    -var proyecto = {nombre: 'Sunrise', seccion: 'Quienes Somos'}
+    title #{proyecto.nombre} | #{proyecto.seccion}
+
+block description
+    meta(name='description', content='Descripción de la página')
+block content
+    .container.main.clearfix
+      .iconos
+      .clearfix.content
+        .clearfix.content_inner
+          .hfeed.main_content
+            .clearfix.main_content_inner
+              .content_left.clearfix
+                .content_left_inner
+                  .main_especialidades
+                    h2.title_rugrats Especialidades
+                    p
+                      | Desde la atención pediátrica más general hasta la terapia respiratoria, Sunrise cuenta con las especialidades clave para que su niño pueda ser atendido con precisión.
+                    .contenido_especialidades.clearfix
+                      ul#lista_especialidad.lista_especialidad.list_reset.clearfix
+                        li#post-35.box.clearfix
+                          // imagen destacada
+                          a(href='detalle-especialidad.html', title='Neumología Pediátrica')
+                            img.attachment-.wp-post-image(src='http://sunrise.pe/wp-content/uploads/2014/10/neumologia-pediatrica2-e1414606079220.png', alt='neumologia-pediatrica2', width='189', height='112')
+                            h4 Neumología Pediátrica
+                        li#post-37.box.clearfix
+                          // imagen destacada
+                          a(href='detalle-especialidad.html', title='Pediatría General')
+                            img.attachment-.wp-post-image(src='http://sunrise.pe/wp-content/uploads/2014/10/Pediatria-general.png', alt='Pediatria-general', width='189', height='112')
+                            h4 Pediatría General
+                        li#post-39.box.clearfix
+                          // imagen destacada
+                          a(href='detalle-especialidad.html', title='Nefrología Pediátrica')
+                            img.attachment-.wp-post-image(src='http://sunrise.pe/wp-content/uploads/2014/10/nefrologia-pediatrica.png', alt='nefrologia-pediatrica', width='189', height='112')
+                            h4 Nefrología Pediátrica
+                        li#post-42.box.clearfix
+                          // imagen destacada
+                          a(href='detalle-especialidad.html', title='Endocrinología Pediátrica')
+                            img.attachment-.wp-post-image(src='http://sunrise.pe/wp-content/uploads/2014/10/endocrinologia-pediatrica.png', alt='endocrinologia-pediatrica', width='189', height='112')
+                            h4 Endocrinología Pediátrica
+                        li#post-71.box.clearfix
+                          // imagen destacada
+                          a(href='detalle-especialidad.html', title='Gastroenterologia Pediatrica')
+                            img.attachment-.wp-post-image(src='http://sunrise.pe/wp-content/uploads/2014/10/gastroenterologia-pediatrica.png', alt='gastroenterologia-pediatrica', width='189', height='112')
+                            h4 Gastroenterologia Pediatrica
+                        li#post-73.box.clearfix
+                          // imagen destacada
+                          a(href='detalle-especialidad.html', title='Terapia Respiratoria')
+                            img.attachment-.wp-post-image(src='http://sunrise.pe/wp-content/uploads/2014/10/terapia-respiratoria.png', alt='terapia-respiratoria', width='189', height='112')
+                            h4 Terapia Respiratoria
+                        li#post-75.box.clearfix
+                          // imagen destacada
+                          a(href='detalle-especialidad.html', title='Pruebas de funcion pulmonar')
+                            img.attachment-.wp-post-image(src='http://sunrise.pe/wp-content/uploads/2014/10/funcion-pulmunar.png', alt='funcion-pulmunar', width='189', height='112')
+                            h4 Pruebas de funcion pulmonar
+                        li#post-77.box.clearfix
+                          // imagen destacada
+                          a(href='detalle-especialidad.html', title='Psicología Infantil')
+                            img.attachment-.wp-post-image(src='http://sunrise.pe/wp-content/uploads/2014/10/psicologiat-infantil.png', alt='psicologiat-infantil', width='189', height='112')
+                            h4 Psicología Infantil
+              .content_right.clearfix
+                .content_right_inner
+                  a.separa(href='http://sunrise.pe/contactenos/')
+                  .cloud_footer
+                  .texto
+                    a.email(href='mailto:jjugo@sunrise.pe') sunrisepediatria@sunrise.pe
+                    .address Av. Benavides 4887 Of. 201 -  Surco
+                    .fono
+                      | Telf: 2751124 
+                      br
+                      |    Cel: 945395469
