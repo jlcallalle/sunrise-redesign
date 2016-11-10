@@ -3,7 +3,9 @@
    consejos
    --------------------------- */
 
-
+.main_consejos .noticia_rugrats {
+  padding: 0;
+}
 .titulo_consejo {
     color: #228b3d;
     font-size: 13px;
@@ -38,4 +40,17 @@
 
 .home .content_consejo p:last-child:after, .home .content_noticias p:last-child:after {
     content: "...";
+}
+
+
+//box-noticias
+.box-noticia {
+    display: inline-block;
+    margin: 0 5% 5% 0;
+    width: 44%;
+    img {
+        height: auto;
+        padding: 0 0 10px;
+        width: 100%;
+    }
 }

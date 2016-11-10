@@ -1,0 +1,56 @@
+extends ../plantillas/plantilla-principal
+
+block title
+    -var proyecto = {nombre: 'Sunrise', seccion: 'Quienes Somos'}
+    title #{proyecto.nombre} | #{proyecto.seccion}
+
+block description
+    meta(name='description', content='Descripción de la página')
+block content
+    .container.main.clearfix
+      .iconos
+      .clearfix.content
+        .clearfix.content_inner
+          .hfeed.main_content
+            .clearfix.main_content_inner
+              .content_left.clearfix
+                .content_left_inner
+                  .main_consejos
+                    h2.noticia_rugrats Consejos y Noticias
+                    h3.title_second Enfermedades típicas del invierno en niños y cómo prevenirlas
+                    .content_consejo.clearfix
+                      .number
+                        em
+                          strong
+                            | Los resfríos, las faringitis y la tos son las molestias más comunes con las que llegan a consulta los padres. Sepa cómo alejarlas de sus pequeños.
+                      p
+                      .number
+                      .number
+                      .number
+                      .number
+                      .parrafo
+                        p
+                          | El frío empieza a imponerse, los rayos solares cada vez son más esporádicos y es
+                      p
+                    a.link(href='http://sunrise.pe/consejo/') Ver Consejos
+                    .contenido_inner
+                      .content_noticias
+                        h3.title_second ¡FELIZ ANIVERSARIO! SUNRISE CUMPLE 1 AÑO CON SUMA ALEGRÍA
+                        p
+                          a(href='http://sunrise.pe/wp-content/uploads/2014/10/collage-modificado.jpg')
+                            img.alignnone.wp-image-286(src='http://sunrise.pe/wp-content/uploads/2014/10/collage-modificado-1024x753.jpg', alt='collage-modificado', width='391', height='288')
+                      .content_noticias
+                        p
+                          | Este 4 de noviembre cumplimos nuestro primer año. Un año de muchas experiencias y gratos momentos que nos genera el sentimiento más profundo de satisfacción, pues todo primer año marca un antes y un después. Marca las bases de lo que
+                      a.link(href='http://sunrise.pe/noticias/') Ver Noticias
+              .content_right.clearfix
+                .content_right_inner
+                  a.separa(href='http://sunrise.pe/contactenos/')
+                  .cloud_footer
+                  .texto
+                    a.email(href='mailto:jjugo@sunrise.pe') sunrisepediatria@sunrise.pe
+                    .address Av. Benavides 4887 Of. 201 -  Surco
+                    .fono
+                      | Telf: 2751124 
+                      br
+                      |    Cel: 945395469
