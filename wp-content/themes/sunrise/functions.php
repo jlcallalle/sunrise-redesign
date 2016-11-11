@@ -474,4 +474,29 @@ function create_post_type() {
 	}
 }
 add_action( "init", "create_post_type" );
+
+function searchConsejosNoticiasResult(){
+	global $id, $paged;
+	$data = (isset($_POST['data'])) ? $_POST['data'] : '';
+	$target = $data['target'] ? $data['target'] : '' ;
+	$id = $data['id'] ? $data['id'] : '' ;
+
+	if(strlen($target) > 0):
+		$arr_target = explode('=',$target);
+		if (count($arr_target)==2) {
+			$paged = $arr_target[1];
+		}elseif(count($arr_target)==3){
+			$arr_target2 = explode('&', $arr_target[1]);
+			$paged = $arr_target2[0];
+		}else{
+			$paged = 1;
+		}
+	else:
+		$paged = 1;
+	endif;
+
+      die(get_template_part('consejos-noticias-search-result'));
+}
+add_action( 'wp_ajax_nopriv_searchConsejosNoticiasResult', 'searchConsejosNoticiasResult' );
+add_action( 'wp_ajax_searchConsejosNoticiasResult', 'searchConsejosNoticiasResult' );
 ?>

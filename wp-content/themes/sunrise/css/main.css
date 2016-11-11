@@ -6220,3 +6220,56 @@ a.verpost {
   top: 57px;
   width: 312px;
 }
+
+/* Paginacion */
+.pagination{
+  background: #f4f4f4;
+  padding: 36px 0;
+  text-align: center;
+}
+
+.pagination span,
+.pagination a{
+  display: inline-block;
+  height: 42px;
+  color: #fff;
+  width: 80px;
+  font-size: 15px;
+  font-family: 'oswald-regular';
+  line-height: 42px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 5px 0 0;
+}
+
+.pagination span{
+  background: #aaaaaa;
+}
+
+.pagination a{
+  background: #2ECCFA;
+}
+
+
+
+.vPagination {
+  border: 1px solid #d9d9d9;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px; }
+  .vPagination a {
+    border: 1px solid #d9d9d9;
+    display: block;
+    line-height: 1;
+    padding: 10px; }
+    .vPagination a:hover {
+      color: #0052A4;
+      background-color: #eeeeee; }
+  .vPagination .disabled a, .vPagination .disabled a:hover {
+    background-color: transparent;
+    color: #bfbfbf;
+    cursor: not-allowed; }
+  .vPagination .active a {
+    color: #0052A4;
+    background-color: #eeeeee; }
+

@@ -98,12 +98,14 @@ jQuery(function() {
 });
 </script>
 
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/main.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/screen.js"></script>
-
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery.placeholder.js"></script>
-
 <script type="text/javascript" src="<?php  bloginfo('template_directory'); ?>/js/flexslider/jquery.flexslider-min.js"></script> 
 
+<input type="hidden" name="template_url" id="template_url" value="<?php bloginfo('template_url'); ?>">
+<input type="hidden" name="site_url" id="site_url" value="<?php echo get_site_url(); ?>">
+<input type="hidden" name="ajax_url" id="ajax_url" value="<?php echo admin_url( 'admin-ajax.php' );?>">
 
 <script type="text/javascript">
 		$(window).load(function() {
