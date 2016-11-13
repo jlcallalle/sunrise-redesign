@@ -1,0 +1,68 @@
+extends ../plantillas/plantilla-principal
+
+block title
+    -var proyecto = {nombre: 'Sunrise', seccion: 'Quienes Somos'}
+    title #{proyecto.nombre} | #{proyecto.seccion}
+
+block description
+    meta(name='description', content='Descripción de la página')
+block content
+    .container.main.clearfix
+      .iconos
+      .clearfix.content
+        .clearfix.content_inner
+          .hfeed.main_content
+            .clearfix.main_content_inner
+              .content_left.clearfix
+                .content_left_inner.citas-en-linea
+                  h2.title_rugrats Citas en linea
+                  p
+                    | Sabemos que la prontitud en la atención de sus consultas es importante. Es por eso que le damos variedad de alternativas para que pueda contactarse con nuestro staff de profesionales. Ya sea por nuestro teléfono fijo 2751124 o completando el requerimiento de atención que encontrará debajo. Cuéntenos sus dudas y háganos saber su pedido de cita de lunes a sábado desde las 3 p.m. hasta las 7 p.m.
+                  p
+                    | Recuerde que si una emergencia sucediera fuera del horario de oficina, siempre puede comunicarse con nosotros al 945395469.
+                  h3.title_second FORMULARIO DE RESERVA DE CITAS
+                  .contentido_formulario
+                    .contentido_formulario_inner
+                      form#contact_form.quick_contact.clearfix(action="<?php bloginfo('template_url'); ?>/bin/citas.php", method='post')
+                        // <form id="contact_form" action="#" method="post" class="contact_form clearfix">
+                        fieldset#form_content_1.form_content_1
+                          p.clearfix.content_label
+                            label.label(for='name') NOMBRES Y APELLIDOS
+                            input#name.text.text_hide.required(type='text', name='name', value='')
+                          p.clearfix.content_label
+                            label.label(for='phone') TELEFONO
+                            input#phone.text.text_hide.required(type='text', name='phone', number='true', value='')
+                          p.clearfix.content_label
+                            label.label(for='email') CORREO
+                            input#email.text.text_hide.required.email(type='text', name='email', value='')
+                          p.clearfix.content_label
+                            label.label(for='especialidad') ESPECIALIDAD
+                            span.espe
+                              select#select.select(name='select')
+                                option(value='', selected='') Seleccione su servicio
+                                option(value='Neumología Pediátrica') Neumología Pediátrica
+                                option(value='Pediatría General') Pediatría General
+                                option(value='Gastroenterología Pediátrica') Gastroenterología Pediátrica
+                                option(value='Nefrología Pediátrica') Nefrología Pediátrica
+                                option(value='Endocrinología Pediátrica') Endocrinología Pediátrica
+                                option(value='Terapia Respiratoria') Terapia Respiratoria 
+                                option(value='Pruebas de función pulmonar') Pruebas de función pulmonar
+                                option(value='Psicología Infantil') Psicología Infantil
+                                option(value='Dermatología Niños') Dermatología Niños
+                          p.clearfix.content_label
+                            label.label(for='comments') COMENTARIOS
+                            textarea#comments.text_hide.required(name='comments', rows='6', cols='30')
+                          p.clearfix.line_enviar
+                            strong#messageBox.float_left
+                            button.submit.btn_aceptar(type='submit') ENVIAR
+              .content_right.clearfix
+                .content_right_inner
+                  a.separa(href='http://sunrise.pe/contactenos/')
+                  .cloud_footer
+                  .texto
+                    a.email(href='mailto:jjugo@sunrise.pe') sunrisepediatria@sunrise.pe
+                    .address Av. Benavides 4887 Of. 201 -  Surco
+                    .fono
+                      | Telf: 2751124 
+                      br
+                      |    Cel: 945395469
