@@ -2,7 +2,7 @@
     Quienes Somos
    --------------------------- */
 
-// 
+//
 // .vision_p {
 //     padding: 13px 0 0 0;
 // }
@@ -12,3 +12,12 @@
 //     padding: 5px 0 0 0;
 //     border:1px solid orange;
 // }
+
+.main-quienes{
+  @include max-screen($tablet-l) {
+    img {
+        width: 100%;
+        max-width: 411px;
+    }
+  }
+}

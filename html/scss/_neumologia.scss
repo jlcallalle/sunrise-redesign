@@ -46,3 +46,14 @@
 .green_wrong {
     color: #029994;
 }
+
+
+
+.main-neumologia{
+  @include max-screen(450px) {
+    img {
+        width: 100%;
+        max-width: 411px;
+    }
+  }
+}

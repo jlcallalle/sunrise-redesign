@@ -4938,13 +4938,28 @@ body {
 }
 
 .main_content_inner {
-  padding: 50px 20px 68px;
+  padding: 50px 20px 90px;
 }
 
 @media screen and (min-width: 830px) {
   .main_content_inner {
-    padding: 35px 0 68px 0;
+    padding: 35px 0 75px 0;
   }
+}
+
+.box-consejos {
+  border-bottom: 1px solid #fff;
+  margin: 0 0 30px;
+  padding: 0 0 30px;
+}
+
+.box-consejos:before, .box-consejos:after {
+  content: '';
+  display: table;
+}
+
+.box-consejos:after {
+  clear: both;
 }
 
 .box-bienvenida {
@@ -4953,14 +4968,14 @@ body {
 
 @media screen and (min-width: 830px) {
   .box-bienvenida {
-    margin-bottom: 62px;
+    margin-bottom: 50px;
   }
 }
 
 .title_rugrats {
   color: #ff8300;
   font-family: 'rugratsregular',arial;
-  font-size: 40px;
+  font-size: 42px;
   letter-spacing: 1.5px;
   margin: 0 0 10px;
 }
@@ -4986,11 +5001,15 @@ body {
 }
 
 .link {
+  background: white none repeat scroll 0 0;
+  border-radius: 6px;
   color: #211915;
   float: right;
   font-size: 14px;
   font-weight: bold;
-  text-decoration: underline;
+  padding: 4px 10px;
+  text-decoration: none;
+  box-shadow: 0 0 1px #a1bfd7;
 }
 
 .separa {
@@ -5009,8 +5028,13 @@ body {
 
 .contenido_inner {
   padding: 14px 0 0;
-  border-top: 1px solid #fff;
-  margin: 40px 0 0 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 830px) {
+  .contenido_inner {
+    margin: 40px 0 0 0;
+  }
 }
 
 .contenido_inner img {
@@ -5040,8 +5064,24 @@ body {
   color: #ff8300;
   font-size: 14px;
   margin: 0 0 10px;
-  padding: 8px 0 0;
+  padding: 0;
   line-height: 1.5em;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
+
+.box-noticias:before, .box-noticias:after {
+  content: '';
+  display: table;
+}
+
+.box-noticias:after {
+  clear: both;
+}
+
+.box-noticias img {
+  margin: 0 0 10px;
 }
 
 .texto {
@@ -5065,6 +5105,13 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .main-home img {
+    width: 100%;
+    max-width: 391px;
+  }
 }
 
 .header {
@@ -5637,6 +5684,13 @@ body {
 /* ---------------------------
     Quienes Somos
    --------------------------- */
+@media screen and (max-width: 830px) {
+  .main-quienes img {
+    width: 100%;
+    max-width: 411px;
+  }
+}
+
 /* ---------------------------
     Contactos
    --------------------------- */
@@ -5795,6 +5849,13 @@ label.error {
   color: #029994;
 }
 
+@media screen and (max-width: 450px) {
+  .main-neumologia img {
+    width: 100%;
+    max-width: 411px;
+  }
+}
+
 /* ---------------------------
    consejos
    --------------------------- */
@@ -5825,24 +5886,33 @@ label.error {
 /* ---------------------------
    consejos
    --------------------------- */
-.consejos-y-noticias .content_consejo p:last-child::after, .consejos-y-noticias .content_noticias p:last-child::after {
-  content: '...';
-}
-
-.home .content_consejo p:last-child:after, .home .content_noticias p:last-child:after {
-  content: "...";
-}
-
 .box-noticia {
   display: inline-block;
-  margin: 0 5% 5% 0;
-  width: 44%;
+  margin: 0 5% 12% 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 530px) {
+  .box-noticia {
+    width: 44%;
+    margin: 0 5% 5% 0;
+  }
 }
 
 .box-noticia img {
   height: auto;
   padding: 0 0 10px;
   width: 100%;
+}
+
+.contenido-image {
+  text-align: center;
+  margin: auto;
+}
+
+.contenido-image > p {
+  margin: 25px 0;
+  text-align: center;
 }
 
 /*cotactenos*/
@@ -6049,8 +6119,7 @@ a.verpost {
   background-color: #14B8B3;
   padding: 5px;
   border-radius: 5px;
-  margin-left: 307px;
-  margin-bottom: 20px;
+  margin: 0;
   color: white;
 }
 

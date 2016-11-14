@@ -1,7 +1,7 @@
 extends ../plantillas/plantilla-principal
 
 block title
-    -var proyecto = {nombre: 'Sunrise', seccion: 'Home'}
+    -var proyecto = {nombre: 'Sunrise', seccion: 'Meicina Pediatrica y especialidades'}
     title #{proyecto.nombre} | #{proyecto.seccion}
 
 block description
@@ -20,7 +20,7 @@ block content
       .iconos
       .clearfix.content
         .clearfix.content_inner
-          .hfeed.main_content
+          .main_content.main-home
             .clearfix.main_content_inner
               .content_left.clearfix
                 .content_left_inner
@@ -32,32 +32,19 @@ block content
                       | La experiencia de cada miembro de nuestro staff, los equipos médicos y los consultorios que hemos implementado nos permite garantizarle la tranquilidad que necesita. 
                       a.link_home(href='http://sunrise.pe/citas-en-linea/', target='_blank')  Comuníquese con nosotros 
                       | para empezar a ocuparnos juntos por la buena salud de los menores.
-                  //- h2.noticia_rugrats Consejos y Noticias
-                  h2.title_rugrats Consejos y Noticias
-                  h3.title_second Enfermedades típicas del invierno en niños y cómo prevenirlas
-                  .content_consejo.clearfix
-                    .number
-                      em
-                        strong
-                          | Los resfríos, las faringitis y la tos son las molestias más comunes con las que llegan a consulta los padres. Sepa cómo alejarlas de sus pequeños.
-                    p
-                      .number
-                      .number
-                      .number
-                      .number
-                      .parrafo
-                        p El frío empieza a imponerse, los rayos solares cada vez son más esporádicos y es
-                  a.link(href='http://sunrise.pe/consejo/') Ver Consejos
-                  .contenido_inner
-                    .content_noticias
-                      h3.title_second ¡FELIZ ANIVERSARIO! SUNRISE CUMPLE 1 AÑO CON SUMA ALEGRÍA
-                      p
-                        a(href='http://sunrise.pe/wp-content/uploads/2014/10/collage-modificado.jpg')
-                          img.alignnone.wp-image-286(src='http://sunrise.pe/wp-content/uploads/2014/10/collage-modificado-1024x753.jpg', alt='collage-modificado', width='391', height='288')
-                    .content_noticias
+                  .box-consejos-noticias
+                    .box-consejos
+                      h2.title_rugrats Consejos y Noticias
+                      a(href="consejos.html").title_second Enfermedades típicas del invierno en niños y cómo prevenirlas
+                      p El frío empieza a imponerse, los rayos solares cada vez son más esporádicos y es también muy común que las salas de espera en hospitales y clínicas infantiles empiecen a cobijar con mayor afluencia a los más pequeños del hogar
+                      a.link(href='consejos.html') Ver Consejos
+                    .box-noticias
+                      a(href="noticias.html").title_second ¡FELIZ ANIVERSARIO! SUNRISE CUMPLE 1 AÑO CON SUMA ALEGRÍA
+                      a(href='http://sunrise.pe/wp-content/uploads/2014/10/collage-modificado.jpg')
+                        img.alignnone.wp-image-286(src='http://sunrise.pe/wp-content/uploads/2014/10/collage-modificado-1024x753.jpg', width='391', height='288')
                       p
                         | Este 4 de noviembre cumplimos nuestro primer año. Un año de muchas experiencias y gratos momentos que nos genera el sentimiento más profundo de satisfacción, pues todo primer año marca un antes y un después. Marca las bases de lo que
-                    a.link(href='http://sunrise.pe/noticias/') Ver Noticias
+                      a.link(href='noticias.html') Ver Noticias
               .content_right.clearfix
                 .content_right_inner
                   a.separa(href='http://sunrise.pe/contactenos/')

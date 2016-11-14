@@ -130,25 +130,31 @@ body {
 }
 
 .main_content_inner {
-  padding: 50px 20px 68px;
+  padding: 50px 20px 90px;
   @include min-screen($tablet-l) {
-    	padding: 35px 0 68px 0;
+    	padding: 35px 0 75px 0;
   }
 
 }
 
+.box-consejos {
+  @include clearfix;
+  border-bottom: 1px solid #fff;
+  margin: 0 0 30px;
+  padding: 0 0 30px;
+}
 
 .box-bienvenida {
     margin-bottom: 30px;
     @include min-screen($tablet-l) {
-        margin-bottom: 62px;
+        margin-bottom: 50px;
     }
 }
 
 .title_rugrats {
     color: #ff8300;
     font-family: 'rugratsregular',arial;
-    font-size: 40px;
+    font-size: 42px;
     letter-spacing: 1.5px;
     margin: 0 0 10px;
     @include min-screen($tablet-l) {
@@ -171,11 +177,15 @@ body {
 }
 
 .link {
-    color: #211915;
-    float: right;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline;
+  background: white none repeat scroll 0 0;
+   border-radius: 6px;
+   color: #211915;
+   float: right;
+   font-size: 14px;
+   font-weight: bold;
+   padding: 4px 10px;
+   text-decoration: none;
+   box-shadow: 0 0 1px #a1bfd7;
 }
 
 .separa {
@@ -198,8 +208,11 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
 
 .contenido_inner {
     padding: 14px 0 0;
-    border-top: 1px solid #fff;
-    margin: 40px 0 0 0;
+    // border-top: 1px solid #fff;
+    margin: 0;
+    @include min-screen($tablet-l) {
+      margin: 40px 0 0 0;
+    }
     img {
         padding: 0 0 10px 0;
 
@@ -229,10 +242,23 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
     color: #ff8300;
     font-size: 14px;
     margin: 0 0 10px;
-    padding: 8px 0 0;
-     line-height: 1.5em;
+    padding: 0;
+    line-height: 1.5em;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+   @include min-screen($tablet-l) {
+    //  padding: 8px 0 0;
+   }
 }
 
+
+.box-noticias {
+    @include clearfix;
+    img {
+      margin: 0 0 10px;
+    }
+}
 
 .texto {
     color: #211915;
@@ -255,4 +281,14 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
     position: absolute;
     top: 0;
     left: 0;
+}
+
+
+.main-home {
+  @include max-screen($tablet-l) {
+    img {
+        width: 100%;
+        max-width: 391px;
+    }
+  }
 }
