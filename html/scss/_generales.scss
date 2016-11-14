@@ -110,8 +110,18 @@ body {
 
 .content_left_inner {
     padding: 0;
+    // border:2px solid green;
     @include min-screen($tablet-l) {
       padding: 2px 15px 0 32px;
+    }
+
+    img {
+      // width: 100%;
+      height: auto;
+      // width: 100%;
+      @include min-screen(500px) {
+        // width: auto;
+      }
     }
 }
 

@@ -12,7 +12,7 @@
 }
 
 .footer_inner {
-	padding: 20px 0 0;
+	padding: 20px 0;
   @include min-screen($tablet-l) {
     padding: 20px 42px 23px;
   }
@@ -52,21 +52,21 @@
     float: right;
     margin: 0;
   }
-
-  p {
-     color: #040404;
-     font-family: 'Comic Sans MS',Arial;
-     font-size: 13px;
-     line-height: 18px;
-     margin: 0;
-     padding: 0 !important;
-     text-align: center;
-     @include min-screen($tablet-l) {
-       text-align: right;
-     }
-
 }
 
+
+.derechos p {
+   color: #040404;
+   font-family: 'Comic Sans MS',Arial;
+   font-size: 13px;
+   line-height: 18px;
+   margin: 0;
+   padding: 0 !important;
+   text-align: center;
+   @include min-screen($tablet-l) {
+     text-align: right;
+   }
+}
 
 .tren {
     background: url("../images/carro.png") no-repeat scroll left top rgba(0, 0, 0, 0);

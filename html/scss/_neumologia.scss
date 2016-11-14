@@ -29,13 +29,17 @@
 
 .tipos p.tipop {
     float: left;
-    width: 210px;
+    @include min-screen($tablet-l) {
+      width: 210px;
+    }
 }
 
 
 .tipos img {
     padding: 9px 0 0 0;
-    margin: 0 0 0 10px;
+    @include min-screen($tablet-l) {
+        margin: 0 0 0 10px;
+    }
 }
 
 

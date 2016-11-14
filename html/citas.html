@@ -7,6 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkpV88uBZSgd2U-JpHX8XKxr4laJidP-I&amp;callback=initMap"></script>
+    <script>
+      function initialize() {
+      var styles = [];
+      var myLatlng = new google.maps.LatLng(-12.127693,-76.986206);
+      var mapOptions = {
+      zoom: 17,
+      scrollwheel: false,
+      center: myLatlng,
+      disableDefaultUI: true,
+      styles: styles
+      }
+      var map = new google.maps.Map(document.getElementById('sunrise-mapa'), mapOptions);
+      
+      
+      var marker = new google.maps.Marker({
+      //icon: "images/iconos/mapa.png",
+      icon: "images/icono-mapa.png",
+      
+      position: myLatlng,
+      map: map,
+      title: ''
+      });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </head>
   <body class="home">
     <main class="wrapper">
@@ -16,12 +42,12 @@
             <nav class="navegacion-principal">
               <h1>Navegación Principal</h1><a class="boton-menu-principal"><span>Menu principal</span><span class="linea"></span></a>
               <ul class="enlaces-navegacion-principal">
-                <li><a href="#">Quiénes Somos</a></li>
-                <li><a href="#">Neumología Pediátrica</a></li>
-                <li><a href="#">Especialidades</a></li>
-                <li><a href="#">Infraestructura</a></li>
-                <li><a href="#">Consejos y Noticias</a></li>
-                <li><a href="#">Citas en Línea</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="neumologia-pediatrica.html">Neumología Pediátrica</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="infraestructura.html">Infraestructura</a></li>
+                <li><a href="consejos-y-noticias.html">Consejos y Noticias</a></li>
+                <li><a href="citas.html">Citas en Línea</a></li>
               </ul>
             </nav>
           </div>
@@ -40,6 +66,8 @@
           </div>
         </div>
       </header>
+      <div id="sunrise-mapa" class="sunrise-mapa">
+      </div>
       <div class="container main clearfix">
         <div class="iconos"></div>
         <div class="clearfix content">

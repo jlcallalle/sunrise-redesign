@@ -3,9 +3,17 @@
    --------------------------- */
 
 .lista_especialidad li {
+  float: left;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+
+  @include min-screen($tablet-l) {
     float: left;
     margin: 10px 15px 10px 0;
     width: 189px;
+  }
+
 }
 
 .lista_especialidad li:hover h4{
@@ -15,9 +23,11 @@
 
 /*.lista_especialidad li:nth-child(2n+2)*/
 .lista_especialidad li:nth-child(even) {
-    float: left;
-    margin-right: 0;
-    width: 189px;
+    @include min-screen($tablet-l) {
+      float: left;
+      margin-right: 0;
+      width: 189px;
+    }
 }
 
 

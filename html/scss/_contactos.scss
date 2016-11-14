@@ -18,8 +18,12 @@ label.label {
 .contentido_formulario input, .contentido_formulario textarea {
     border-radius: 6px;
     margin: 4px 0 0;
-    padding: 6px;
-    width: 380px;
+    padding: 6px 0;
+    width: 98%;
+    @include min-screen($tablet-l) {
+      width: 380px;
+      padding: 6px;
+    }
 
 }
 

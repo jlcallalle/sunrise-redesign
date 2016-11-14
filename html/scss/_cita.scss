@@ -12,9 +12,14 @@ margin: 0 0 3px;
     border: 1px solid #5fc6fb;
     border-radius: 6px;
     height: 32px;
-    padding: 6px;
-    width: 395px;
+    padding: 6px 0;
+    width: 98%;
     outline:none;
+
+    @include min-screen($tablet-l) {
+      width: 395px;
+      padding: 6px;
+    }
 }
 
 
@@ -37,4 +42,12 @@ margin: 0 0 3px;
 .link_home {
     font-weight: bold;
     text-decoration: none;
+}
+
+.sunrise-mapa {
+  width: 100%;
+  height: 220px;
+  @include min-screen($tablet-l) {
+    height: 388px;
+  }
 }
