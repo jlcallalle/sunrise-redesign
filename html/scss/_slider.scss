@@ -49,6 +49,9 @@
   border:none;
   box-shadow:none;
   margin:0;
+  .slides > li {
+    margin:0;
+  }
 }
 
 .flex-direction-nav a {

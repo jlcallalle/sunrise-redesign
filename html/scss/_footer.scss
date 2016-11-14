@@ -12,22 +12,33 @@
 }
 
 .footer_inner {
-	padding: 20px 42px 23px;
+	padding: 20px 0 0;
+  @include min-screen($tablet-l) {
+    padding: 20px 42px 23px;
+  }
 }
 
 
 .lista_footer {
-	float: left;
 	margin: 0;
-
+  @include min-screen($tablet-l) {
+    float: left;
+  }
 }
 
 
 .lista_footer li {
-    background: url("../images/guion.png") no-repeat scroll right center rgba(0, 0, 0, 0);
-    display: inline-block;
-    margin: 0 6px 0 0;
-    padding: 0 6px 0 0;
+    display: block;
+    margin: 0 0 10px;
+    padding:0;
+    text-align: center;
+    @include min-screen($tablet-l) {
+      background: url("../images/guion.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+      display: inline-block;
+      margin: 0 6px 0 0;
+      padding: 0 6px 0 0;
+      text-align: left;
+    }
 }
 
 
@@ -36,7 +47,24 @@
 }
 
 .derechos {
-	float: right;
+  margin: 20px 0 0;
+  @include min-screen($tablet-l) {
+    float: right;
+    margin: 0;
+  }
+
+  p {
+     color: #040404;
+     font-family: 'Comic Sans MS',Arial;
+     font-size: 13px;
+     line-height: 18px;
+     margin: 0;
+     padding: 0 !important;
+     text-align: center;
+     @include min-screen($tablet-l) {
+       text-align: right;
+     }
+
 }
 
 
@@ -47,16 +75,6 @@
     right: 34px;
     top: -41px;
     width: 250px;
-}
-
-.derechos > p {
-    color: #040404;
-    font-family: 'Comic Sans MS',Arial;
-    font-size: 13px;
-    line-height: 18px;
-    margin: 0;
-    padding: 0 !important;
-    text-align: right;
 }
 
 

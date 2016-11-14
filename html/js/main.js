@@ -24,7 +24,37 @@ var MyApp = {
     seccion : {
         modulo : function() {
         }
+    },
+    navegacionPrincipal : {
+        desplegar : function() {
+
+            $('main').click(function(e) {
+                $('.boton-menu-principal').removeClass('activado');
+            });
+
+            $('footer').click(function(e) {
+                $('.boton-menu-principal').removeClass('activado');
+            });
+
+            $('.cerrar-sesion').click(function(e) {
+                $('.perfil').removeClass('activado');
+            });
+
+            $('.boton-menu-principal').click(function(event) {
+                //alert('hola');
+                    event.stopPropagation();
+                    event.preventDefault();
+                    if (!$(this).hasClass('activado')) {
+                        $(this).addClass('activado');
+                    } else {
+                        $(this).removeClass('activado');
+                    };
+                    $('.perfil').removeClass('activado');
+            });
+
+        }
     }
+
 }
 
 $(document).ready(function(){
@@ -32,6 +62,8 @@ $(document).ready(function(){
     if($('.clase').length){
         MyApp.seccion.modulo();
     }
+
+    MyApp.navegacionPrincipal.desplegar();
 
     $('.flexslider').flexslider({
     });

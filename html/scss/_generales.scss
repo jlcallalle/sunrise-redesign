@@ -109,7 +109,10 @@ body {
 
 
 .content_left_inner {
-    padding: 2px 15px 0 32px;
+    padding: 0;
+    @include min-screen($tablet-l) {
+      padding: 2px 15px 0 32px;
+    }
 }
 
 .content_right_inner {
@@ -117,16 +120,31 @@ body {
 }
 
 .main_content_inner {
-	padding: 35px 0 68px 0;
+  padding: 50px 20px 68px;
+  @include min-screen($tablet-l) {
+    	padding: 35px 0 68px 0;
+  }
+
 }
 
+
+.box-bienvenida {
+    margin-bottom: 30px;
+    @include min-screen($tablet-l) {
+        margin-bottom: 62px;
+    }
+}
 
 .title_rugrats {
     color: #ff8300;
     font-family: 'rugratsregular',arial;
-    font-size: 56px;
+    font-size: 40px;
     letter-spacing: 1.5px;
-    margin: 0 0 21px;
+    margin: 0 0 10px;
+    @include min-screen($tablet-l) {
+      font-size: 56px;
+      margin: 0 0 21px;
+    }
 }
 
 .noticia_rugrats {
@@ -174,6 +192,10 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
     margin: 40px 0 0 0;
     img {
         padding: 0 0 10px 0;
+
+        width: 100%;
+        height: auto;
+
     }
 }
 

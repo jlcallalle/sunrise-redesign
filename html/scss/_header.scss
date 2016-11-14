@@ -1,6 +1,8 @@
 .header {
   // border:2px solid yellow;
+  display: none;
   @include min-screen($tablet-l) {
+    display: block;
     // border:2px solid blue;
   }
 }
@@ -253,4 +255,243 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
 
 html {
     // opacity: 0.2;
+}
+
+
+//
+.header-sitio {
+    z-index: 100;
+    position: relative;
+    display: block;
+    @include min-screen($tablet-l) {
+        // height: 90px;
+        display: none;
+    }
+    >h1 {
+        display: none;
+    }
+}
+
+
+.contenedor-logo-y-navegacion-principal {
+    background-color: white;
+    height: 80px;
+    box-shadow: 0 3px 4px -3px #a3a0a0;
+    position: relative;
+    z-index: 1;
+
+    @include min-screen($tablet-l) {
+        height: 90px;
+    }
+}
+
+.logo-y-navegacion-principal {
+    @include contenedor();
+    @include clearfix;
+    //padding: 0 0 0 20px;
+    position: relative;
+    // height: inherit;
+    height: 80px;
+}
+
+.logo-header {
+    float: left;
+    //margin: 9px 0;
+    // width: 155px;
+    // margin: 16px 0 10px 20px;
+    // margin: 5px 0 0 20px;
+    margin:5px 0 9px 20px;
+    width: 85px;
+    height: auto;
+
+    // @include min-screen($movil-l) {
+    //     margin: 16px 0 16px 20px;
+    //     width: 175px;
+    // }
+    //
+    //
+    //  @include min-screen($tablet-l) {
+    //     margin: 9px 0 9px 20px;
+    //     width: auto;
+    // }
+}
+
+.navegacion-principal {
+    float: right;
+    @include max-screen($tablet-l) {
+        // box-shadow: 0px -1px 5px 0px rgba(163,160,160,1);
+    }
+    >h1 {
+        display: none;
+    }
+
+     .icono-mundi {
+        background: #60646d url("../images/header/mundo.png") no-repeat 26px  center;
+        padding: 0 26px 0 26px;
+        a {
+            display: inline-block;
+            color:#fff;
+            font-size: 12px;
+            background: none;
+        }
+        .boton-idioma {
+            float: right;
+            padding: 0;
+            background: #7e8289;
+            margin: 14px 0;
+            padding: 3px 4px;
+        }
+    }
+
+}
+
+.boton-menu-principal {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    //background: green none repeat scroll 0 0;
+    z-index: 50000000;
+    cursor: pointer;
+
+    >span {
+        display: block;
+
+        &:first-child {
+            display: none;
+        }
+
+        @include min-screen($tablet-l) {
+            display: none;
+        }
+    }
+
+    .linea {
+        width: 20px;
+        height: 14px;
+        border: 2px solid #8d8d8d;
+        border-left: none;
+        border-right: none;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            margin-top: -1px;
+            background-color: #8d8d8d;
+        }
+    }
+}
+
+.enlaces-navegacion-principal {
+    position: relative;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    font-size: 0;
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 501;
+    transition: max-height 0.5s ease-in;
+    margin:0;
+
+    .activado + & {
+        max-height: 800px;
+        transition: max-height 0.5s ease-in;
+    }
+
+
+    @include min-screen($tablet-l) {
+        position: static;
+        max-height: initial;
+        background-color: transparent;
+        margin-top: 38px;
+        overflow: visible;
+    }
+
+    @include min-screen($escritorio) {
+        margin-top: 36px;
+    }
+
+    >li {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        border-bottom: 1px solid #d3d3d3;
+        margin:0;
+
+        @include min-screen($tablet-l) {
+            border-bottom: none;
+            width: auto;
+            position: relative;
+            padding: 0 0 32px;
+            margin: 0 5px 0 0;
+        }
+
+        &:last-child {
+            border: none;
+
+            > a{
+                padding-right: 0;
+            }
+        }
+
+
+        a {
+            &:hover {
+                 @include min-screen($tablet-l) {
+                    background: red;
+                    border-radius: 13px;
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+
+
+
+    a {
+        font-size: 14px;
+        display: block;
+        // font-family: Arial;
+        color: black;
+        padding: 18px 30px;
+        text-decoration: none;
+
+         &.activado, &:hover, &:active {
+            color: #ff8300;
+
+            @include min-screen($tablet-l) {
+                color: #ff8300;
+            }
+        }
+
+        @include min-screen($tablet-l) {
+        font-size: 14px;
+        background: none;
+        display: inline-block;
+        }
+
+        @include min-screen($tablet-l) {
+            font-size: 13px;
+        }
+
+        @include min-screen($tablet-l) {
+            padding: 0 8px;
+        }
+
+        @include min-screen($escritorio) {
+            //padding: 0 14px;
+            padding: 0 13px;
+            font-size: 16px;
+        }
+
+    }
+
+
 }
