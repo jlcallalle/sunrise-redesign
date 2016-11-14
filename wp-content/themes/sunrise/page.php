@@ -261,118 +261,87 @@ get_header(); ?>
 		<div class="iconos"></div>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
 				<div class="clearfix content_inner">
-					<div class="hfeed main_content">
-						 
+					<div class="hfeed main_content">						 
 						<div class="clearfix main_content_inner">
-							
-							<div class="content_left clearfix">
+							<div class="content_main clearfix">
 								<div class="content_left_inner">																												
+									<?php 
+									$args01 = array(
+									  'offset'           => 0,
+									  'orderby'          => 'date',
+									  'order'            => 'DESC',
+									  'post_type'        => 'consejo-noticia',
+									  'post_status'      => 'publish',
+									  'suppress_filters' => true,
+									  'tax_query' => array(
+									    array(
+									      'taxonomy' => 'categoria-consejo-noticia',
+									      'field' => 'slug',
+									      'terms' => 'consejo' // Where term_id of Term 1 is "1". //$term
+									    )
+									  )
+									);
+									$allConsejos = get_posts( $args01 ); //obtengo las publicaciones del slug que indico 
 
-										<div class="contenido_inner">
-
-										<?php 
-										/*
-									    $consejo_noticia = array(
-										    'suppress_filters' => false,
-										    'post_type' => 'consejo-noticia',
-										    'post_status' => 'publish',
-										    'posts_per_page' => -1,
-										    'sort_column' => 'menu_order',
-										    'order' => 'DESC',
-										    'orderby' => 'meta_value'
-									   	); 
-									    $allConsejoNoticia = new WP_Query($consejo_noticia);  
-									    */
-
-										$args01 = array(
-										  'offset'           => 0,
-										  'orderby'          => 'date',
-										  'order'            => 'DESC',
-										  'post_type'        => 'consejo-noticia',
-										  'post_status'      => 'publish',
-										  'suppress_filters' => true,
-										  'tax_query' => array(
-										    array(
-										      'taxonomy' => 'categoria-consejo-noticia',
-										      'field' => 'slug',
-										      'terms' => 'consejo' // Where term_id of Term 1 is "1". //$term
-										    )
-										  )
-										);
-										$allConsejos = get_posts( $args01 ); //obtengo las publicaciones del slug que indico 
-
-										$args02 = array(
-										  'offset'           => 0,
-										  'orderby'          => 'date',
-										  'order'            => 'DESC',
-										  'post_type'        => 'consejo-noticia',
-										  'post_status'      => 'publish',
-										  'suppress_filters' => true,
-										  'tax_query' => array(
-										    array(
-										      'taxonomy' => 'categoria-consejo-noticia',
-										      'field' => 'slug',
-										      'terms' => 'noticia' // Where term_id of Term 1 is "1". //$term
-										    )
-										  )
-										);
-										$allNoticias = get_posts( $args02 ); //obtengo las publicaciones del slug que indico 	
-
-										//$termchildren = get_terms('categoria-consejo-noticia');
-										/*
-										echo "<pre>";
-										print_r($allConsejos);
-										echo "</pre>";
-										*/
-										?>
-									<h2 class="noticia_rugrats">Noticias</h2>
-										<a class="link" href="<?php echo get_permalink(350); ?>" >Ver Todos</a>
-										<?php foreach($allNoticias as $key => $noticia): ?>
-									     	<?php 
-											//the_advanced_excerpt('length=50&length_type=words');
-											$postPage = get_field('programa_data_pagina', 'consejo');
-											?>
-												<div class="content_noticias">
-												<a><h3 class="title_second"><?php echo get_the_title($noticia->ID); ?></h3></a>
-												<p><a href="<?php echo get_permalink($noticia->ID); ?>"><img class="alignnone wp-image-286 " src="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>" alt="collage-modificado" width="391" height="288"></a></p>
-												</div>
-												<div class="content_noticias">
-												<p><?php echo $noticia->post_content; ?></p></div>	
-												<a class="link" href="<?php echo get_permalink($noticia->ID); ?>" >Ver Noticias</a>
-											<?php if ($key == 3) break; ?>									
+									$args02 = array(
+									  'offset'           => 0,
+									  'orderby'          => 'date',
+									  'order'            => 'DESC',
+									  'post_type'        => 'consejo-noticia',
+									  'post_status'      => 'publish',
+									  'suppress_filters' => true,
+									  'tax_query' => array(
+									    array(
+									      'taxonomy' => 'categoria-consejo-noticia',
+									      'field' => 'slug',
+									      'terms' => 'noticia' // Where term_id of Term 1 is "1". //$term
+									    )
+									  )
+									);
+									$allNoticias = get_posts( $args02 ); //obtengo las publicaciones del slug que indico 	
+									?>																																													
+				                    <div class="main_consejos">
+				                      <h2 class="noticia_rugrats">Consejos</h2>
+				                      <a class="link" href="<?php echo get_permalink(348); ?>" >Ver Todos</a>	
+				                      <div class="contenido_inner">
+				                      	<?php foreach($allConsejos as $key => $consejo): ?>
+									     	<?php //$postPage = get_field('programa_data_pagina', 'consejo'); ?>					                      	
+					                        <div class="box-noticia">
+					                          <div class="content_noticias"><a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>
+					                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
+					                          </div>
+					                          <div class="content_noticias">
+					                            <?php echo $consejo->post_content; ?>
+					                          </div><a href="<?php echo get_permalink($consejo->ID); ?>" class="link">Ver más</a>
+					                        </div>
+					                        <?php if ($key == 1) break; ?>									
 										<?php endforeach; ?>
-
-									<br><br><br><br>
-
-									<h2 class="noticia_rugrats">Consejos</h2>
-										<a class="link" href="<?php echo get_permalink(348); ?>" >Ver Todos</a>
-										<?php foreach($allConsejos as $key => $consejo): ?>
-									     	<?php 
-											//the_advanced_excerpt('length=50&length_type=words');
-											$postPage = get_field('programa_data_pagina', 'consejo'); 
-											?>
-												<div class="content_noticias">
-												<a><h3 class="title_second"><?php echo get_the_title($consejo->ID); ?></h3></a>
-												<p><a href="<?php echo get_permalink($consejo->ID); ?>"><img class="alignnone wp-image-286 " src="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288"></a></p>
-												</div>
-												<div class="content_noticias">
-												<p><?php echo $consejo->post_content; ?></p></div>	
-												<a class="link" href="<?php echo get_permalink($consejo->ID); ?>" >Ver Noticias</a>
-											<?php if ($key == 3) break; ?>									
-										<?php endforeach; ?>															
-
-										</div> 
+				                      </div>
+				                    </div>
+				                    <div class="main_consejos">
+				                      <h2 class="noticia_rugrats">Noticias</h2>
+				                      <a class="link" href="<?php echo get_permalink(350); ?>" >Ver Todos</a>	
+				                      <div class="contenido_inner">
+				                      	<?php foreach($allNoticias as $key => $noticia): ?>					                      	
+					                        <div class="box-noticia">
+					                          <div class="content_noticias"><a href="<?php echo get_permalink($noticia->ID); ?>" class="title_second"><?php echo get_the_title($noticia->ID); ?></a>
+					                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
+					                          </div>
+					                          <div class="content_noticias">
+					                            <?php echo $noticia->post_content; ?>
+					                          </div><a href="<?php echo get_permalink($noticia->ID); ?>" class="link">Ver más</a>
+					                        </div>
+					                        <?php if ($key == 1) break; ?>									
+										<?php endforeach; ?>
+				                      </div>
+				                    </div>					                    
 								</div>
 							</div>
-							<?php get_sidebar(); ?>
-							
-						</div> 
-					
+							<?php //get_sidebar(); ?>							
+						</div> 					
 					</div>
-
 				</div><!--End content_inner -->
 		</div><!--End content -->
-
 </div>
 
 

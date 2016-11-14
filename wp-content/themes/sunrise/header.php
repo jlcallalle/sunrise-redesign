@@ -39,14 +39,14 @@
 
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/base.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/animate.css" type="text/css" media="screen" />
+<!-- <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/base.css" type="text/css" media="screen" /> -->
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/js/flexslider/flexslider.css" type="text/css" media="screen" />
 
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/js/selectbox/css/sexy-combo.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/js/fancybox2/jquery.fancybox.css?v=2.1.5" media="screen" />
 
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/layout.css" type="text/css" media="screen" />
+<!-- <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/layout.css" type="text/css" media="screen" /> -->
 
 
 <?php if ( is_single() ) { ?>
