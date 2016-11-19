@@ -310,9 +310,8 @@ get_header(); ?>
 					                          <div class="content_noticias"><a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>
 					                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
 					                          </div>
-					                          <div class="content_noticias">
-					                            <?php echo $consejo->post_content; ?>
-					                          </div><a href="<?php echo get_permalink($consejo->ID); ?>" class="link">Ver más</a>
+					                          <div class="number"><em><strong><?php echo $consejo->post_content; ?></strong></em></div> 
+					                          <a href="<?php echo get_permalink($consejo->ID); ?>" class="link">Ver más</a>
 					                        </div>
 					                        <?php if ($key == 1) break; ?>									
 										<?php endforeach; ?>
@@ -327,9 +326,8 @@ get_header(); ?>
 					                          <div class="content_noticias"><a href="<?php echo get_permalink($noticia->ID); ?>" class="title_second"><?php echo get_the_title($noticia->ID); ?></a>
 					                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
 					                          </div>
-					                          <div class="content_noticias">
-					                            <?php echo $noticia->post_content; ?>
-					                          </div><a href="<?php echo get_permalink($noticia->ID); ?>" class="link">Ver más</a>
+					                          <div class="number"><em><strong><?php echo $noticia->post_content; ?></strong></em></div> 
+					                          <a href="<?php echo get_permalink($noticia->ID); ?>" class="link">Ver más</a>
 					                        </div>
 					                        <?php if ($key == 1) break; ?>									
 										<?php endforeach; ?>

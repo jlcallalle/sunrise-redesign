@@ -26,7 +26,7 @@ get_header(); ?>
 					                          <p><a href="<?php echo get_field('imagen_consejo_noticia'); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$post->ID); ?>" alt="collage-modificado" height="288" width="391" class="alignnone wp-image-286"></a></p>
 					                        </div>
 					                      </div>
-										  <div class="number"><em><strong><?php echo $consejo->post_content; ?></strong></em></div>	
+										  <div class="number"><em><strong><?php the_content(); ?></strong></em></div>	
 										  <br>				                      
 					                      <div class="content_noticias">
 					                        <?php echo get_field('descripcion_completa'); ?>				                        

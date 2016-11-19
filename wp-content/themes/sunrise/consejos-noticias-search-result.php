@@ -50,7 +50,7 @@
                           <div class="content_noticias"><a href="<?php echo get_permalink($noticias->ID); ?>" class="title_second"><?php echo get_the_title($noticias->ID); ?></a>
                             <p><a href="<?php echo get_field('imagen_consejo_noticia',$noticias->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$noticias->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
                           </div>
-                          <div class="number"><em><strong><?php echo $consejo->post_content; ?></strong></em></div> 
+                          <div class="number"><em><strong><?php the_content(); ?></strong></em></div> 
                           <br>
                           <div class="content_noticias">
                             <?php echo get_field('descripcion_completa'); ?>
