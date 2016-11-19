@@ -302,7 +302,7 @@ get_header(); ?>
 									?>																																													
 				                    <div class="main_consejos">
 				                      <h2 class="noticia_rugrats">Consejos</h2>
-				                      <a class="link" href="<?php echo get_permalink(348); ?>" >Ver Todos</a>	
+				                      <a class="link" href="<?php echo get_permalink(331); ?>" >Ver Todos</a>	
 				                      <div class="contenido_inner">
 				                      	<?php foreach($allConsejos as $key => $consejo): ?>
 									     	<?php //$postPage = get_field('programa_data_pagina', 'consejo'); ?>					                      	
@@ -320,7 +320,7 @@ get_header(); ?>
 				                    </div>
 				                    <div class="main_consejos">
 				                      <h2 class="noticia_rugrats">Noticias</h2>
-				                      <a class="link" href="<?php echo get_permalink(350); ?>" >Ver Todos</a>	
+				                      <a class="link" href="<?php echo get_permalink(333); ?>" >Ver Todos</a>	
 				                      <div class="contenido_inner">
 				                      	<?php foreach($allNoticias as $key => $noticia): ?>					                      	
 					                        <div class="box-noticia">

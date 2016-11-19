@@ -5,7 +5,7 @@ Template Name: Lista Consejos Noticias
 get_header(); ?>
 
 <?php
-	if($post->ID==348) $terms = 'consejo'; else $terms = 'noticia';
+	if($post->ID==331) $terms = 'consejo'; else $terms = 'noticia';
 
 	$args = array(
 	  'offset'           => 0,
@@ -44,7 +44,7 @@ get_header(); ?>
 								<div class="content_left_inner">									                    
 									<?php if($allConsejos): ?>
 					                    <div class="main_consejos">
-					                      <h2 class="noticia_rugrats"><?php if($post->ID == 350) echo "Noticias"; else echo "Consejos"; ?></h2>
+					                      <h2 class="noticia_rugrats"><?php if($post->ID == 333) echo "Noticias"; else echo "Consejos"; ?></h2>
 					                      <div class="contenido_inner">
 					                      	<?php foreach($allConsejos as $key => $consejo): ?>	
 					                      		<?php $rows++; if($rows < $min) { continue; }  if($rows > $max) { break; }  ?>  			                      	
@@ -52,15 +52,14 @@ get_header(); ?>
 						                          <div class="content_noticias"><a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>
 						                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
 						                          </div>
-						                          <div class="content_noticias">
-						                            <?php echo $consejo->post_content; ?>
-						                          </div><a href="<?php echo get_permalink($consejo->ID); ?>" class="link">Ver más</a>
+												  <div class="number"><em><strong><?php echo $consejo->post_content; ?></strong></em></div>						                          
+						                          <a href="<?php echo get_permalink($consejo->ID); ?>" class="link">Ver más</a>
 						                        </div>								
 											<?php endforeach; ?>
 					                      </div>
 					                    </div>
-					                    <?php ($post->ID == 348) ? $id=350 : $id=348; ?>
-					                    <a class="verpost" href="<?php echo get_permalink($id); ?>" >Ver <?php if($post->ID == 348) echo "Noticias"; else echo "Consejo"; ?></a>
+					                    <?php ($post->ID == 331) ? $id=333 : $id=331; ?>
+					                    <a class="verpost" href="<?php echo get_permalink($id); ?>" >Ver <?php if($post->ID == 331) echo "Noticias"; else echo "Consejo"; ?></a>
 				                    <?php endif; ?>				                    
 								</div>
 							</div>
