@@ -32,7 +32,7 @@ get_header(); ?>
     $min = (($paged * $post_per_page) - $post_per_page) + 1;
     $max = ( $min + $post_per_page ) - 1;
     //End Datos de Paginación
-?>
+?> <!-- push -->
 <div class="listado-noticia" id="idConsejosNoticias" data-postperpage="<?php echo $post_per_page;?>">
 	<div class="container main clearfix">
 		<div class="iconos"></div>
