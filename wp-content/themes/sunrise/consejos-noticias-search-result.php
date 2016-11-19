@@ -44,18 +44,15 @@
                   <div class="main_consejos">
                     <h2 class="noticia_rugrats"><?php if($id == 333) echo "Noticias"; else echo "Consejos"; ?></h2>
                     <div class="contenido_inner">
-                      <?php foreach($allNoticias as $key => $noticias): ?>
+                      <?php foreach($allNoticias as $key => $valor): ?>
                         <?php $rows++; if($rows < $min) { continue; }  if($rows > $max) { break; }  ?>                                
                         <div class="box-noticia">
-                          <div class="content_noticias"><a href="<?php echo get_permalink($noticias->ID); ?>" class="title_second"><?php echo get_the_title($noticias->ID); ?></a>
-                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$noticias->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$noticias->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
+                          <div class="content_noticias"><a href="<?php echo get_permalink($valor->ID); ?>" class="title_second"><?php echo get_the_title($valor->ID); ?></a>
+                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
                           </div>
-                          <div class="number"><em><strong><?php the_content(); ?></strong></em></div> 
-                          <br>
-                          <div class="content_noticias">
-                            <?php echo get_field('descripcion_completa'); ?>
-                          </div><a href="<?php echo get_permalink($noticias->ID); ?>" class="link">Ver más</a>
-                        </div>                
+                          <div class="number"><em><strong><?php the_content($valor->ID); ?></strong></em></div>
+                          <a href="<?php echo get_permalink($valor->ID); ?>" class="link">Ver más</a>
+                          <br>               
                       <?php endforeach; ?>
                     </div>
                   </div>
