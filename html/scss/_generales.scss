@@ -123,6 +123,15 @@ body {
         // width: auto;
       }
     }
+
+    .contenido_noticia {
+      h4 {
+        color: gray;
+       font-size: 14px;
+       font-weight: bold;
+       }
+    }
+
 }
 
 .content_right_inner {
@@ -170,6 +179,7 @@ body {
     letter-spacing: 1.5px;
     margin: 0;
     padding: 62px 0 0;
+    display: inline-block;
 }
 
 .consejos-y-noticias .noticia_rugrats {
@@ -183,9 +193,18 @@ body {
    float: right;
    font-size: 14px;
    font-weight: bold;
-   padding: 4px 10px;
+   padding: 10px 20px;
    text-decoration: none;
    box-shadow: 0 0 1px #a1bfd7;
+   @include min-screen($tablet-l) {
+     padding: 4px 10px;
+   }
+
+   &:hover  {
+      background: #ff8300 none repeat scroll 0 0;
+      color: white;
+      text-decoration: none;
+   }
 }
 
 .separa {
@@ -211,7 +230,9 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
     // border-top: 1px solid #fff;
     margin: 0;
     @include min-screen($tablet-l) {
-      margin: 40px 0 0 0;
+      // margin: 40px 0 0 0;
+      margin: 12px 0 0 0;
+      padding: 10px 0 0;
     }
     img {
         padding: 0 0 10px 0;
@@ -246,9 +267,10 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
     line-height: 1.5em;
     font-weight: bold;
     display: block;
-    text-transform: uppercase;
+    // text-transform: uppercase;
    @include min-screen($tablet-l) {
-    //  padding: 8px 0 0;
+      font-size: 14px;
+      // border:1px solid orange;
    }
 }
 
@@ -290,5 +312,16 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
         width: 100%;
         max-width: 391px;
     }
+  }
+}
+
+.contenido-paginacion {
+  margin-top: 30px;
+  .paginacion {
+      margin: 0 auto;
+      padding: 10px;
+      text-align: center;
+      width: 150px;
+      border:1px solid orange;
   }
 }

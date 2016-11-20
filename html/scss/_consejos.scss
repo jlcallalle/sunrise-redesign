@@ -53,20 +53,37 @@
       width: 44%;
       margin: 0 5% 5% 0;
     }
+    @include min-screen($tablet-l) {
+      float: left;
+    }
 
     img {
         height: auto;
         padding: 0 0 10px;
         width: 100%;
+        @include min-screen($tablet-l) {
+          padding: 10px 0 15px 0;
+        }
+
+
     }
 }
 
 .contenido-image {
   text-align: center;
   margin: auto;
+  padding: 10px 0 20px 0;
+  @include min-screen($tablet-l) {
+  padding: 25px 0 20px;
+  }
+
 }
 
 .contenido-image > p {
     margin: 25px 0;
     text-align: center;
 }
+
+.content_noticias > span   {
+  color:gray;
+ }
