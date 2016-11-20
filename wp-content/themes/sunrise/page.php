@@ -281,7 +281,7 @@ get_header(); ?>
 									    )
 									  )
 									);
-									$allConsejos = get_posts( $args01 ); //obtengo las publicaciones del slug que indico 
+									$allConsejos = new WP_Query( $args01 ); //obtengo las publicaciones del slug que indico 
 
 									$args02 = array(
 									  'offset'           => 0,
@@ -298,13 +298,13 @@ get_header(); ?>
 									    )
 									  )
 									);
-									$allNoticias = get_posts( $args02 ); //obtengo las publicaciones del slug que indico 	
+									$allNoticias = new WP_Query( $args02 ); ; //obtengo las publicaciones del slug que indico 	
 									?>																																													
 				                    <div class="main_consejos">
 				                      <h2 class="noticia_rugrats">Consejos</h2>
 				                      <a class="link" href="<?php echo get_permalink(331); ?>" >Ver Todos</a>	
 				                      <div class="contenido_inner">
-				                      	<?php foreach($allConsejos as $key => $consejo): ?>
+				                      	<?php foreach($allConsejos->posts as $key => $consejo): ?>
 									     	<?php //$postPage = get_field('programa_data_pagina', 'consejo'); ?>					                      	
 					                        <div class="box-noticia">
 					                          <div class="content_noticias"><a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>
@@ -321,7 +321,7 @@ get_header(); ?>
 				                      <h2 class="noticia_rugrats">Noticias</h2>
 				                      <a class="link" href="<?php echo get_permalink(333); ?>" >Ver Todos</a>	
 				                      <div class="contenido_inner">
-				                      	<?php foreach($allNoticias as $key => $noticia): ?>					                      	
+				                      	<?php foreach($allNoticias->posts as $key => $noticia): ?>		                 	
 					                        <div class="box-noticia">
 					                          <div class="content_noticias"><a href="<?php echo get_permalink($noticia->ID); ?>" class="title_second"><?php echo get_the_title($noticia->ID); ?></a>
 					                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>

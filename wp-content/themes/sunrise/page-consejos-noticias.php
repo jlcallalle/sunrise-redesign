@@ -22,12 +22,12 @@ get_header(); ?>
 	    )
 	  )
 	);
-	$allConsejos = get_posts( $args ); //obtengo las publicaciones del slug que indico 
+	$allConsejos = new WP_Query( $args ); //obtengo las publicaciones del slug que indico 
 
     $post_per_page = 4;
     $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
     $rows = 0;
-    $total = count($allConsejos);
+    $total = count($allConsejos->posts);
     $pages = ceil($total / $post_per_page);
     $min = (($paged * $post_per_page) - $post_per_page) + 1;
     $max = ( $min + $post_per_page ) - 1;
@@ -42,11 +42,11 @@ get_header(); ?>
 						<div class="clearfix main_content_inner">							
 							<div class="content_main clearfix">
 								<div class="content_left_inner">									                    
-									<?php if($allConsejos): ?>
+									<?php if($allConsejos->posts): ?>
 					                    <div class="main_consejos">
 					                      <h2 class="noticia_rugrats"><?php if($post->ID == 333) echo "Noticias"; else echo "Consejos"; ?></h2>
 					                      <div class="contenido_inner">
-					                      	<?php foreach($allConsejos as $key => $consejo): ?>	
+					                      	<?php foreach($allConsejos->posts as $key => $consejo): ?>	
 					                      		<?php $rows++; if($rows < $min) { continue; }  if($rows > $max) { break; }  ?>  			                      	
 						                        <div class="box-noticia">
 						                          <div class="content_noticias"><a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>

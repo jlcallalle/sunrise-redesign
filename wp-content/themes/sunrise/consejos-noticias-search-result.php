@@ -18,20 +18,20 @@
         )
       )
     );
-    $allNoticias = get_posts( $args ); //obtengo las publicaciones del slug que indico 
+    $allNoticias = new WP_Query( $args ); //obtengo las publicaciones del slug que indico 
 
     //Start Datos de Paginación
     $post_per_page = 4;
     //$paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
     $rows = 0;
-    $total = count($allNoticias);
+    $total = count($allNoticias->posts);
     $pages = ceil($total / $post_per_page);
     $min = (($paged * $post_per_page) - $post_per_page) + 1;
     $max = ( $min + $post_per_page ) - 1;
     //End Datos de Paginación 
 ?>
 
-<?php if ($allNoticias): ?>      
+<?php if ($allNoticias->posts): ?>      
   <div class="container main clearfix">
     <div class="iconos"></div>
     <div class="clearfix  content">     
@@ -40,24 +40,24 @@
           <div class="clearfix main_content_inner">             
             <div class="content_main clearfix">
               <div class="content_left_inner">                
-                <?php if($allNoticias): ?>
+                <?php if($allNoticias->posts): ?>
                   <div class="main_consejos">
                     <h2 class="noticia_rugrats"><?php if($id == 333) echo "Noticias"; else echo "Consejos"; ?></h2>
                     <div class="contenido_inner">
-                      <?php foreach($allNoticias as $key => $valor): ?>
+                      <?php foreach($allNoticias->posts as $key => $valor): ?>
                         <?php $rows++; if($rows < $min) { continue; }  if($rows > $max) { break; }  ?>                                
                         <div class="box-noticia">
                           <div class="content_noticias"><a href="<?php echo get_permalink($valor->ID); ?>" class="title_second"><?php echo get_the_title($valor->ID); ?></a>
                             <p><a href="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
                           </div>
-                          <div class="number"><em><strong><?php the_content($valor->ID); ?></strong></em></div>
+                          <div class="number"><em><strong><?php echo $valor->post_content; ?></strong></em></div>
                           <a href="<?php echo get_permalink($valor->ID); ?>" class="link">Ver más</a>
-                          <br>               
+                        </div>            
                       <?php endforeach; ?>
                     </div>
                   </div>
-                  <?php ($post->ID == 331) ? $id=333 : $id=331; ?>
-                  <a class="verpost" href="<?php echo get_permalink($id); ?>" >Ver <?php if($post->ID == 331) echo "-Noticias"; else echo "-Consejo"; ?></a>
+                  <?php ($id == 331) ? $idCambio=333 : $idCambio=331; ?>
+                  <a class="verpost" href="<?php echo get_permalink($idCambio); ?>" >Ver <?php if($id == 331) echo "Noticias"; else echo "Consejo"; ?></a>
                 <?php endif; ?>                                                    
               </div>
             </div>
