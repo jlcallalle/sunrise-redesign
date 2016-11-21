@@ -11,7 +11,7 @@
 <meta charset="utf-8">
 <!-- Use the .htaccess and remove these lines to avoid edge case issues.
        More info: h5bp.com/i/378 -->
-<!--[if IE ]> 
+<!--[if IE ]>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <![endif]-->
 
@@ -41,12 +41,12 @@
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <!-- <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/base.css" type="text/css" media="screen" /> -->
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/js/flexslider/flexslider.css" type="text/css" media="screen" />
+<!-- <link rel="stylesheet" href="<?php // bloginfo( 'template_url' ); ?>/js/flexslider/flexslider.css" type="text/css" media="screen" /> -->
 
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/js/selectbox/css/sexy-combo.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/js/fancybox2/jquery.fancybox.css?v=2.1.5" media="screen" />
+<!-- <link rel="stylesheet" href="<?php //bloginfo('template_directory'); ?>/js/selectbox/css/sexy-combo.css" rel="stylesheet" type="text/css" /> -->
+<!-- <link rel="stylesheet" href="<?php //bloginfo( 'template_url' ); ?>/js/fancybox2/jquery.fancybox.css?v=2.1.5" media="screen" /> -->
 
-<!-- <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/layout.css" type="text/css" media="screen" /> -->
+<!-- <link rel="stylesheet" href="<?php //bloginfo( 'template_url' ); ?>/css/layout.css" type="text/css" media="screen" /> -->
 
 
 <?php if ( is_single() ) { ?>
@@ -56,28 +56,28 @@
   <meta property="og:description" content='<?php echo get_excerpt_by_id($post_id); ?>' />
   <meta property="og:type" content="article" />
 
-	<?php 
+	<?php
 		$images =& get_children( 'post_type=attachment&post_mime_type=image&post_parent=' . $post->ID );
 		if ($images) {
 		  $keys = array_keys($images);
 		  $num = $keys[0];
 		  $firstImageSrc = wp_get_attachment_thumb_url($num);
 		?>
-			
+
 			<?php if(has_post_thumbnail()) { ?>
-			 
-        
+
+
 				<?php
 				global $wp_query;
 				$thePostID = $wp_query->post->ID;
 				if( has_post_thumbnail( $thePostID )){
-          
+
           $thumb_id = get_post_thumbnail_id($thePostID);
           $thumb_url = wp_get_attachment_image_src($thumb_id,'medium', true);
 
           ?>
 
-          
+
           <meta property="og:image" content="<?php echo $thumb_url[0] ?>" />
 
         <?php } ?>
@@ -85,14 +85,14 @@
 			<?php } else { ?>
 
           <meta property="og:image" content="<?php echo $firstImageSrc ?>" />
-			
+
 			<?php } ?>
 
-		  
+
 	<?php } else { ?>
-		
+
     <meta property="og:image" content="<?php bloginfo( 'template_url' ); ?>/images/logo-facebook-icon.jpg" />
-		
+
 	<?php } ?>
 
 
@@ -120,7 +120,7 @@ if (typeof jQuery == 'undefined')
 
 
 <!--[if lt IE 9]>
-	
+
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie-only.css" type="text/css" media="screen" />
   	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/selectivizr.js"></script>
   	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/css3-mediaqueries.js"></script>
@@ -133,28 +133,28 @@ if (typeof jQuery == 'undefined')
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/normalize.js"></script>
 
 <style>
-	
+
 
 
 </style>
 </head>
 <body <?php body_class(); ?>>
 
-	<!-- Start wrapper -->	
-	<div class="wrapper <?php echo $post->post_name; ?> 
+	<!-- Start wrapper -->
+	<div class="wrapper <?php echo $post->post_name; ?>
 
 	<?php if ( is_single() ) { ?>
 		<?php ?><?php
-		$category = get_the_category(); 
+		$category = get_the_category();
 		echo $category[0]->category_nicename;
 		?><?php  ?>
-		
-		<?php 
-		foreach((get_the_category()) as $category) { 
-		    echo $category->category_nicename.' '; 
-		} 
-		?>		
-		
+
+		<?php
+		foreach((get_the_category()) as $category) {
+		    echo $category->category_nicename.' ';
+		}
+		?>
+
 		<?php }  ?>">
 
 		<header class="header container">
@@ -168,7 +168,7 @@ if (typeof jQuery == 'undefined')
 						<a class="vertical_text navi3" href="<?php echo get_option('home'); ?>/infraestructuras">Infraestructura</a>
 						<a class="vertical_text navi4" href="<?php echo get_option('home'); ?>/consejos-y-noticias/">Consejos y Noticias</a>
 						<a class="vertical_text navi5" href="<?php echo get_option('home'); ?>/citas-en-linea/">Citas en Línea</a>
-					</div> 
+					</div>
 				</div>
 
 				<div class="content_clound clearfix">
@@ -182,7 +182,7 @@ if (typeof jQuery == 'undefined')
 					<div class="cloud"></div>
 
 					<div class="pajarito">
-						
+
 						<img id="notamusical" src="<?php bloginfo('template_directory');?>/images/notamusical.png" />
 					</div>
 
@@ -200,7 +200,7 @@ if (typeof jQuery == 'undefined')
 						</a>
 
 
-						
+
 
 
 					</div>
@@ -241,7 +241,7 @@ if (typeof jQuery == 'undefined')
 
 			} elseif (is_page('26') or (is_page('29'))) {
 				echo '<iframe width="1600" height="385" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com.pe/maps/ms?msa=0&amp;msid=201076096626471681580.000505d3ac7c63376a3f4&amp;hl=es&amp;ie=UTF8&amp;t=m&amp;ll=-12.127693,-76.986206&amp;spn=0.002019,0.008578&amp;z=18&amp;output=embed"></iframe><br />';
-				
+
 
 			} else{
 
@@ -249,9 +249,5 @@ if (typeof jQuery == 'undefined')
 			?>
 
 
-			
-		</div>  
 
-
-
-
+		</div>
