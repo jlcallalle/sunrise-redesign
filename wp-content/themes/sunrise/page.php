@@ -16,12 +16,12 @@ get_header(); ?>
 		<div class="clearfix  content">
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
-						 
+
 						<div class="clearfix main_content_inner">
-							
+
 							<div class="content_left clearfix">
 								<div class="content_left_inner">
-									
+
 									<div class="main_quienes_somos">
 										<h2 class="title_rugrats"><?php the_title()?> </h2>
 
@@ -30,17 +30,17 @@ get_header(); ?>
 	                                    <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 	                                    <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 
-										
+
 									</div>
 									<?php endwhile; else: ?>
 				                    <p>Sorry, no posts matched your criteria.</p>
 				                    <?php endif; ?>
-									
+
 								</div>
 							</div>
-							<?php get_sidebar(); ?> 
-						</div> 
-					
+							<?php get_sidebar(); ?>
+						</div>
+
 					</div>
 
 				</div><!--End content_inner -->
@@ -55,7 +55,7 @@ get_header(); ?>
 <div class="container main clearfix">
 		<div class="iconos"></div>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
-				
+
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
 						<div class="clearfix main_content_inner">
@@ -70,18 +70,18 @@ get_header(); ?>
 	                                    <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 	                                    <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 
-										
+
 									</div>
 									<?php endwhile; else: ?>
 				                    <p>Sorry, no posts matched your criteria.</p>
 				                    <?php endif; ?>
 
 										<!-- <h2 class="title_rugrats"><?php //the_title()?> </h2> -->
-				
+
 								</div>
 							</div>
-							<?php get_sidebar(); ?> 
-						</div> 
+							<?php get_sidebar(); ?>
+						</div>
 					</div>
 
 				</div><!--End content_inner -->
@@ -97,7 +97,7 @@ get_header(); ?>
 <div class="container main clearfix">
 		<div class="iconos"></div>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
-				
+
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
 						<div class="clearfix main_content_inner">
@@ -125,36 +125,36 @@ get_header(); ?>
 													            ));
 													         $i = 1;
 													      ?>
-													     
+
 													      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-													         <li id="post-<?php the_ID(); ?>"  class="box  clearfix"> 
-													          
+													         <li id="post-<?php the_ID(); ?>"  class="box  clearfix">
+
 													              <!-- imagen destacada -->
 													              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-																	<?php the_post_thumbnail( $size, $attr ); ?> 
+																	<?php the_post_thumbnail( $size, $attr ); ?>
 																	 <h4><?php the_title() ?></h4>
 																  </a>
 
 
-													        </li> 
+													        </li>
 
 													      <?php $i++; endwhile; endif; ?>
 													      <?php $wp_query = null; $wp_query = $temp;?>
 													      <?php rewind_posts(); ?>
 													      <?php wp_reset_query(); ?>
-													</ul> 
+													</ul>
 
 										</div>
 
 									</div>
-								
-								
-				
+
+
+
 								</div>
 							</div>
-							<?php get_sidebar(); ?> 
-						</div> 
+							<?php get_sidebar(); ?>
+						</div>
 					</div>
 
 				</div><!--End content_inner -->
@@ -171,9 +171,9 @@ get_header(); ?>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
-						 
+
 						<div class="clearfix main_content_inner">
-							
+
 							<div class="content_left clearfix">
 								<div class="content_left_inner">
 									<div class="main_infraestructura">
@@ -181,7 +181,7 @@ get_header(); ?>
 										<p>En Sunrise queremos que los padres tengan confianza en nuestra experiencia profesional y que los niños vean a los médicos como sus aliados. Por eso hemos adecuado nuestras instalaciones para ellos, nuestra principal preocupación. Con motivos lúdicos y un ambiente amigable especialmente diseñado para los niños. Contamos con equipos de última generación para que nuestro centro le ofrezca el mejor de los servicios.</p>
 
 										<div class="galeria-consutorio">
-									
+
 											<ul id="lista_especialidad" class="lista_especialidad list_reset clearfix">
 													      <?php
 													      wp_reset_query();
@@ -198,25 +198,25 @@ get_header(); ?>
 													            ));
 													         $i = 1;
 													      ?>
-													     
+
 													      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-													         <li id="post-<?php the_ID(); ?>"  class="box  clearfix"> 
+													         <li id="post-<?php the_ID(); ?>"  class="box  clearfix">
 														            <!-- Apply Custon Files-->
-																	
-																	<a class="fancybox" href="<?php echo get_post_meta($post->ID, "imagen_zoom", true); ?>"  title="<?php the_title_attribute(); ?> " 
+
+																	<a class="fancybox" href="<?php echo get_post_meta($post->ID, "imagen_zoom", true); ?>"  title="<?php the_title_attribute(); ?> "
 																	data-fancybox-group="gallery">
-																	
+
 																	<?php the_post_thumbnail('post-thumbnail', array( 'class'	=> "img-infraestructura")); ?></a>
 																  </a>
 
-													        </li> 
+													        </li>
 
 													      <?php $i++; endwhile; endif; ?>
 													      <?php $wp_query = null; $wp_query = $temp;?>
 													      <?php rewind_posts(); ?>
 													      <?php wp_reset_query(); ?>
-													</ul> 
+													</ul>
 
 
 										<!-- 	<a class="fancybox" href="<?php bloginfo( 'template_directory' ); ?>/images/consultorios/sunrise-counter2.jpg" data-fancybox-group="gallery" title="">
@@ -236,16 +236,16 @@ get_header(); ?>
 											<a/>
 
 											<a class="fancybox" href="<?php bloginfo( 'template_directory' ); ?>/images/consultorios/sunrise-consultorio-de-especialidades.jpg" data-fancybox-group="gallery" title="">
-												<img class="img-consultorio" src="<?php bloginfo('template_directory')?>/images/consultorios/sunrise-consultorio-de-especialidades-thu.jpg"> 
+												<img class="img-consultorio" src="<?php bloginfo('template_directory')?>/images/consultorios/sunrise-consultorio-de-especialidades-thu.jpg">
 											<a/>-->
 										</div>
 									</div>
 								</div>
 							</div>
 							<?php get_sidebar(); ?>
-							
-						</div> 
-					
+
+						</div>
+
 					</div>
 
 				</div><!--End content_inner -->
@@ -261,11 +261,11 @@ get_header(); ?>
 		<div class="iconos"></div>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
 				<div class="clearfix content_inner">
-					<div class="hfeed main_content">						 
+					<div class="hfeed main_content">
 						<div class="clearfix main_content_inner">
 							<div class="content_main clearfix">
-								<div class="content_left_inner">																												
-									<?php 
+								<div class="content_left_inner">
+									<?php
 									$args01 = array(
 									  'offset'           => 0,
 									  'orderby'          => 'date',
@@ -281,7 +281,7 @@ get_header(); ?>
 									    )
 									  )
 									);
-									$allConsejos = new WP_Query( $args01 ); //obtengo las publicaciones del slug que indico 
+									$allConsejos = new WP_Query( $args01 ); //obtengo las publicaciones del slug que indico
 
 									$args02 = array(
 									  'offset'           => 0,
@@ -298,45 +298,49 @@ get_header(); ?>
 									    )
 									  )
 									);
-									$allNoticias = new WP_Query( $args02 ); ; //obtengo las publicaciones del slug que indico 	
-									?>																																													
+									$allNoticias = new WP_Query( $args02 ); ; //obtengo las publicaciones del slug que indico
+									?>
 				                    <div class="main_consejos">
 				                      <h2 class="noticia_rugrats">Consejos</h2>
-				                      <a class="link" href="<?php echo get_permalink(331); ?>" >Ver Todos</a>	
-				                      <div class="contenido_inner">
+				                      <a class="verpost" href="<?php echo get_permalink(331); ?>" >Ver Consejos</a>
+				                      <div class="contenido_inner clearfix">
 				                      	<?php foreach($allConsejos->posts as $key => $consejo): ?>
-									     	<?php //$postPage = get_field('programa_data_pagina', 'consejo'); ?>					                      	
+									     	<?php //$postPage = get_field('programa_data_pagina', 'consejo'); ?>
 					                        <div class="box-noticia">
-					                          <div class="content_noticias"><a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>
-					                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
+					                          <div class="content_noticias">
+																			<a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>
+					                            <img src="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286">
+					                            <!-- <p><a href="<?php //echo get_field('imagen_consejo_noticia',$consejo->ID); ?>"><img src="<?php //echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p> -->
 					                          </div>
-					                          <div class="number"><em><strong><?php echo $consejo->post_content; ?></strong></em></div> 
+																		<div class="desc_noticias">
+				                              <p><?php echo $consejo->post_content; ?></p>
+				                            </div>
 					                          <a href="<?php echo get_permalink($consejo->ID); ?>" class="link">Ver más</a>
 					                        </div>
-					                        <?php if ($key == 1) break; ?>									
+					                        <?php if ($key == 1) break; ?>
 										<?php endforeach; ?>
 				                      </div>
 				                    </div>
 				                    <div class="main_consejos">
 				                      <h2 class="noticia_rugrats">Noticias</h2>
-				                      <a class="link" href="<?php echo get_permalink(333); ?>" >Ver Todos</a>	
-				                      <div class="contenido_inner">
-				                      	<?php foreach($allNoticias->posts as $key => $noticia): ?>		                 	
+				                      <a class="verpost" href="<?php echo get_permalink(333); ?>" >Ver Noticias</a>
+				                      <div class="contenido_inner clearfix">
+				                      	<?php foreach($allNoticias->posts as $key => $noticia): ?>
 					                        <div class="box-noticia">
 					                          <div class="content_noticias"><a href="<?php echo get_permalink($noticia->ID); ?>" class="title_second"><?php echo get_the_title($noticia->ID); ?></a>
 					                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
 					                          </div>
-					                          <div class="number"><em><strong><?php echo $noticia->post_content; ?></strong></em></div> 
+					                          <div class="number"><em><strong><?php echo $noticia->post_content; ?></strong></em></div>
 					                          <a href="<?php echo get_permalink($noticia->ID); ?>" class="link">Ver más</a>
 					                        </div>
-					                        <?php if ($key == 1) break; ?>									
+					                        <?php if ($key == 1) break; ?>
 										<?php endforeach; ?>
 				                      </div>
-				                    </div>					                    
+				                    </div>
 								</div>
 							</div>
-							<?php //get_sidebar(); ?>							
-						</div> 					
+							<?php //get_sidebar(); ?>
+						</div>
 					</div>
 				</div><!--End content_inner -->
 		</div><!--End content -->
@@ -352,9 +356,9 @@ get_header(); ?>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
-						 
+
 						<div class="clearfix main_content_inner">
-							
+
 							<div class="content_left clearfix">
 								<div class="content_left_inner">
 									<h2 class="title_rugrats"><?php the_title(); ?></h2>
@@ -373,14 +377,14 @@ get_header(); ?>
 				                     <p>Sorry, no posts matched your criteria.</p>
 				                     <?php endif; ?>
 
-									
-									
+
+
 								</div>
 							</div>
 							<?php get_sidebar(); ?>
-							
-						</div> 
-					
+
+						</div>
+
 					</div>
 
 				</div><!--End content_inner -->
@@ -398,9 +402,9 @@ get_header(); ?>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
-						 
+
 						<div class="clearfix main_content_inner">
-							
+
 							<div class="content_left clearfix">
 								<div class="content_left_inner">
 									<h2 class="title_rugrats"><?php the_title();?></h2>
@@ -420,9 +424,9 @@ get_header(); ?>
 								</div>
 							</div>
 							<?php get_sidebar(); ?>
-							
-						</div> 
-					
+
+						</div>
+
 					</div>
 
 				</div><!--End content_inner -->
@@ -445,9 +449,9 @@ get_header(); ?>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
-						 
+
 						<div class="clearfix main_content_inner">
-							
+
 							<div class="content_left clearfix">
 								<div class="content_left_inner">
 									<h2 class="title_rugrats">Contactenos</h2>
@@ -470,7 +474,7 @@ get_header(); ?>
 														<input id="email" class="text text_hide required email" type="text" name="email" value="" />
 													</p>
 
-													
+
 													 <p class="clearfix content_label">
 														<label class="label" for="phone">TELEFONO</label>
 														<input id="phone" class="text text_hide required" type="text" name="phone" number="true" value="" />
@@ -478,7 +482,7 @@ get_header(); ?>
 													 <p class="clearfix content_label">
 														<label class="label" for="comments">COMENTARIOS</label>
 														<textarea id="comments" class="text_hide required" name="comments" rows="6" cols="30"></textarea>
-													</p> 
+													</p>
 
 													<p class="clearfix line_enviar">
 														<strong id="messageBox" class="float_left"></strong>
@@ -488,15 +492,15 @@ get_header(); ?>
 												</fieldset>
 											</form>
 
-											
+
 										</div>
 									</div>
 								</div>
 							</div>
-							<?php get_sidebar(); ?> 
-							
-						</div> 
-					
+							<?php get_sidebar(); ?>
+
+						</div>
+
 					</div>
 
 				</div><!--End content_inner -->
@@ -516,15 +520,15 @@ get_header(); ?>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
-						 
+
 						<div class="clearfix main_content_inner">
-							
+
 							<div class="content_left clearfix">
 								<div class="content_left_inner">
 									<h2 class="title_rugrats">Citas en linea</h2>
 									<p>Sabemos que la prontitud en la atención de sus consultas es importante. Es por eso que le damos variedad de alternativas para que pueda contactarse con nuestro staff de profesionales. Ya sea por nuestro teléfono fijo 2751124 o completando el requerimiento de atención que encontrará debajo. Cuéntenos sus dudas y háganos saber su pedido de cita de lunes a sábado desde las 3 p.m. hasta las 7 p.m.</p>
 									<p>Recuerde que si una emergencia sucediera fuera del horario de oficina, siempre puede comunicarse con nosotros al 945395469.</p>
-	
+
 									<h3 class="title_second">FORMULARIO DE RESERVA DE CITAS</h3>
 									<div class="contentido_formulario">
 										<div class="contentido_formulario_inner">
@@ -540,20 +544,20 @@ get_header(); ?>
 													<p class="clearfix content_label">
 														<label class="label" for="phone">TELEFONO</label>
 														<input id="phone" class="text text_hide required" type="text" name="phone" number="true" value="" />
-													
+
 
 													<p class="clearfix content_label">
 														<label class="label" for="email">CORREO</label>
 														<input id="email" class="text text_hide required email" type="text" name="email" value="" />
-													
 
-													
+
+
 													<p class="clearfix content_label">
 														<label class="label" for="especialidad">ESPECIALIDAD</label>
-														<span class="espe"> 
+														<span class="espe">
 															<select id="select" class="select" name="select">
 															  <option value="" selected>Seleccione su servicio</option>
-															  <option value="Neumología Pediátrica">Neumología Pediátrica</option> 
+															  <option value="Neumología Pediátrica">Neumología Pediátrica</option>
 															  <option value="Pediatría General">Pediatría General</option>
 															  <option value="Gastroenterología Pediátrica">Gastroenterología Pediátrica</option>
 															  <option value="Nefrología Pediátrica">Nefrología Pediátrica</option>
@@ -563,7 +567,7 @@ get_header(); ?>
 															  <option value="Psicología Infantil">Psicología Infantil</option>
 															   <option value="Dermatología Niños">Dermatología Niños</option>
 															</select>
-														</span> 
+														</span>
 													</p>
 
 													<p class="clearfix content_label">
@@ -579,15 +583,15 @@ get_header(); ?>
 												</fieldset>
 											</form>
 
-											
+
 										</div>
 									</div>
 								</div>
 							</div>
 							<?php get_sidebar(); ?>
-							
-						</div> 
-					
+
+						</div>
+
 					</div>
 
 				</div><!--End content_inner -->
@@ -605,7 +609,7 @@ get_header(); ?>
 <div class="container main clearfix">
 		<div class="iconos"></div>
 		<div class="clearfix  content<?php if ( is_page('your page') ) { ?>my-page<?php }  ?>">
-				
+
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
 						<div class="clearfix main_content_inner">
@@ -613,7 +617,7 @@ get_header(); ?>
 
 								<div class="content_left_inner">
 
-													
+
 									<div class="main_especial">
 										<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 										<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
@@ -628,8 +632,8 @@ get_header(); ?>
 								</div>
 
 							</div>
-							<?php get_sidebar(); ?> 
-						</div> 
+							<?php get_sidebar(); ?>
+						</div>
 					</div>
 
 				</div><!--End content_inner -->
@@ -645,7 +649,7 @@ get_header(); ?>
 <div class="container main clearfix">
 		<div class="iconos"></div>
 		<div class="clearfix  content">
-				
+
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
 						<div class="clearfix main_content_inner">
@@ -663,8 +667,8 @@ get_header(); ?>
 							</div>
 
 
-							<?php get_sidebar(); ?> 
-						</div> 
+							<?php get_sidebar(); ?>
+						</div>
 					</div>
 
 				</div><!--End content_inner -->
@@ -678,7 +682,7 @@ get_header(); ?>
 <div class="container main clearfix">
 		<div class="iconos"></div>
 		<div class="clearfix  content">
-				
+
 				<div class="clearfix content_inner">
 					<div class="hfeed main_content">
 						<div class="clearfix main_content_inner">
@@ -690,12 +694,12 @@ get_header(); ?>
 									<p class="nombre-doctor">Gracias por Escribirnos</p>
 									<a class="volver-atras" href="<?php echo get_option('home'); ?>/"> Volver al Inicio</a>
 								</div>
-								
+
 							</div>
 
 
-							<?php get_sidebar(); ?> 
-						</div> 
+							<?php get_sidebar(); ?>
+						</div>
 					</div>
 
 				</div><!--End content_inner -->
@@ -731,9 +735,9 @@ get_header(); ?>
 			</div>
 		</div>
 		<?php endwhile; endif; ?>
-		
+
 		<div>
-			<?php 
+			<?php
 				$url= get_permalink();
 				$tokens = explode('/', $url);
 				$tag = $tokens[sizeof($tokens)-2];
@@ -755,15 +759,15 @@ get_header(); ?>
 			  <div class="alignleft"><?php previous_posts_link('&laquo; Previous') ?></div>
 			  <div class="alignright"><?php next_posts_link('More &raquo;') ?></div>
 			</div>
-			
+
 			<div class="navigation">
 				<div class="custom_nav">
 					<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 				</div>
 			</div>
-			<?php rewind_posts(); ?>			
+			<?php rewind_posts(); ?>
 			<?php $wp_query = null; $wp_query = $temp;?>
-		
+
 		</div>
 
 	</div>
