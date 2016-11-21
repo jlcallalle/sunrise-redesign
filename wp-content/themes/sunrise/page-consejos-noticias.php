@@ -48,11 +48,15 @@ get_header(); ?>
 			                      <div class="contenido_inner clearfix">
 			                      	<?php foreach($allConsejos->posts as $key => $consejo): ?>
 			                      		<?php $rows++; if($rows < $min) { continue; }  if($rows > $max) { break; }  ?>
-				                        <div class="box-noticia test">
-				                          <div class="content_noticias"><a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>
-				                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
+				                        <div class="box-noticia">
+				                          <div class="content_noticias">
+																		<a href="<?php echo get_permalink($consejo->ID); ?>" class="title_second"><?php echo get_the_title($consejo->ID); ?></a>
+				                            <img src="<?php echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286">
+				                            <!-- <p><a href="<?php //echo get_field('imagen_consejo_noticia',$consejo->ID); ?>"><img src="<?php //echo get_field('imagen_consejo_noticia',$consejo->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p> -->
 				                          </div>
-										  						<div class="number"><em><strong><?php echo $consejo->post_content; ?></strong></em></div>
+																	<div class="desc_noticias">
+																		<p><?php echo $consejo->post_content; ?></p>
+																	</div>
 				                          <a href="<?php echo get_permalink($consejo->ID); ?>" class="link">Ver más</a>
 				                        </div>
 															<?php endforeach; ?>

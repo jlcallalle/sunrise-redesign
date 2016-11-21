@@ -44,14 +44,17 @@
                 <?php if($allNoticias->posts): ?>
                   <div class="main_consejos">
                     <h2 class="noticia_rugrats"><?php if($id == 333) echo "Noticias"; else echo "Consejos"; ?></h2>
-                    <div class="contenido_inner clearfix jorge">
+                    <div class="contenido_inner clearfix">
                       <?php foreach($allNoticias->posts as $key => $valor): ?>
                         <?php $rows++; if($rows < $min) { continue; }  if($rows > $max) { break; }  ?>
                         <div class="box-noticia">
                           <div class="content_noticias"><a href="<?php echo get_permalink($valor->ID); ?>" class="title_second"><?php echo get_the_title($valor->ID); ?></a>
-                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
+                            <img src="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286">
+                            <!-- <p><a href="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$valor->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p> -->
                           </div>
-                          <div class="number"><em><strong><?php echo $valor->post_content; ?></strong></em></div>
+                          <div class="desc_noticias">
+                            <p><?php echo $valor->post_content; ?></p>
+                          </div>
                           <a href="<?php echo get_permalink($valor->ID); ?>" class="link">Ver más</a>
                         </div>
                       <?php endforeach; ?>
