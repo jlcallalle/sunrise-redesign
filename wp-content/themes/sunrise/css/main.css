@@ -1050,8 +1050,8 @@ textarea {
 }
 
 /*input.text, textarea {
-  background: #FFF;
-  border: #7E9DB9 solid 1px;
+	background: #FFF;
+	border: #7E9DB9 solid 1px;
 }*/
 input.text, textarea {
   background: none repeat scroll 0 0 #f2f2f2;
@@ -5151,6 +5151,62 @@ body {
   border: 1px solid orange;
 }
 
+/* Paginacion Backend */
+.pagination {
+  padding: 36px 0;
+  text-align: center;
+}
+
+.pagination span,
+.pagination a {
+  display: inline-block;
+  height: 42px;
+  color: #fff;
+  width: 89px;
+  font-size: 14px;
+  font-family: 'Arial_rounded_bold';
+  line-height: 42px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 5px 0 0;
+}
+
+.pagination span {
+  background: #aaaaaa;
+}
+
+.pagination a {
+  background: #2ECCFA;
+}
+
+.vPagination {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.vPagination a {
+  border: 1px solid #d9d9d9;
+  display: block;
+  line-height: 1;
+  padding: 10px;
+}
+
+.vPagination a:hover {
+  color: #0052A4;
+  background-color: #eeeeee;
+}
+
+.vPagination .disabled a, .vPagination .disabled a:hover {
+  background-color: transparent;
+  color: #bfbfbf;
+  cursor: not-allowed;
+}
+
+.vPagination .active a {
+  color: #0052A4;
+  background-color: #eeeeee;
+}
+
 .header {
   display: none;
 }
@@ -5896,6 +5952,17 @@ label.error {
 /* ---------------------------
    consejos
    --------------------------- */
+.main_consejos a.verpost {
+  padding: 10px;
+}
+
+@media screen and (min-width: 830px) {
+  .main_consejos a.verpost {
+    margin: 0 50px 0 0;
+    padding: 5px;
+  }
+}
+
 .main_consejos .noticia_rugrats {
   padding: 0;
 }
@@ -6280,54 +6347,3 @@ a.verpost {
   top: 57px;
   width: 312px;
 }
-
-/* Paginacion Backend */
-.pagination{
-  background: #f4f4f4;
-  padding: 36px 0;
-  text-align: center;
-}
-
-.pagination span,
-.pagination a{
-  display: inline-block;
-  height: 42px;
-  color: #fff;
-  width: 80px;
-  font-size: 15px;
-  font-family: 'oswald-regular';
-  line-height: 42px;
-  text-align: center;
-  text-decoration: none;
-  margin: 0 5px 0 0;
-}
-
-.pagination span{
-  background: #aaaaaa;
-}
-
-.pagination a{
-  background: #2ECCFA;
-}
-
-.vPagination {
-  border: 1px solid #d9d9d9;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px; }
-  .vPagination a {
-    border: 1px solid #d9d9d9;
-    display: block;
-    line-height: 1;
-    padding: 10px; }
-    .vPagination a:hover {
-      color: #0052A4;
-      background-color: #eeeeee; }
-  .vPagination .disabled a, .vPagination .disabled a:hover {
-    background-color: transparent;
-    color: #bfbfbf;
-    cursor: not-allowed; }
-  .vPagination .active a {
-    color: #0052A4;
-    background-color: #eeeeee; }
-
