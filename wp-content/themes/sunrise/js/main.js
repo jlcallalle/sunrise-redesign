@@ -25,7 +25,7 @@ function searchConsejosNoticias(target){
 	      data: {action:accion,data:data},
 	      beforeSend: function() {
 	        var section='';
-	            section+='<section class="vPadding-20 vMarginTop-35 vMarginBottom-35">'
+	            section+='<section class="contenedor-prev">'
 	            section+='<tr>'
 	            section+='<td colspan="3" style="width:770px;">'
 	            section+='<div id="cargandoajax" style="text-align:center;">'

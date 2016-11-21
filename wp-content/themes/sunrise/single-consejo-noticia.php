@@ -22,11 +22,12 @@ get_header(); ?>
 									<div class="contenido_noticia">
 					                      <div class="content_noticias">
 					                        <h3 class="title_second"><?php the_title();?></h3>
+					                        <span>Publicado: <?php echo the_time( get_option( 'date_format' ) ); ?></span>
 					                        <div class="contenido-image">
 					                          <p><a href="<?php echo get_field('imagen_consejo_noticia'); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$post->ID); ?>" alt="collage-modificado" height="288" width="391" class="alignnone wp-image-286"></a></p>
 					                        </div>
 					                      </div>
-										  <div class="number"><em><strong><?php the_content(); ?></strong></em></div>	
+										  <div class="number"><em><strong><?php the_content(); ?></strong></em></div>
 										  <br>				                      
 					                      <div class="content_noticias">
 					                        <?php echo get_field('descripcion_completa'); ?>				                        
