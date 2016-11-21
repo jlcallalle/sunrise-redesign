@@ -44,7 +44,7 @@
                 <?php if($allNoticias->posts): ?>
                   <div class="main_consejos">
                     <h2 class="noticia_rugrats"><?php if($id == 333) echo "Noticias"; else echo "Consejos"; ?></h2>
-                    <div class="contenido_inner">
+                    <div class="contenido_inner clearfix jorge">
                       <?php foreach($allNoticias->posts as $key => $valor): ?>
                         <?php $rows++; if($rows < $min) { continue; }  if($rows > $max) { break; }  ?>
                         <div class="box-noticia">
@@ -56,7 +56,7 @@
                         </div>
                       <?php endforeach; ?>
                     </div>
-                      <?php       
+                      <?php
                         $link_page = paginate_links( array(
                           'format' => '?paged=%#%',
                           'current' => $paged,

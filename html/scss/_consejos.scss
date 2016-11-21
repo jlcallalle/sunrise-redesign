@@ -2,6 +2,15 @@
 /* ---------------------------
    consejos
    --------------------------- */
+.main_consejos {
+  a.verpost {
+    padding: 10px;
+    @include min-screen($tablet-l) {
+      margin: 0 50px 0 0;
+      padding: 5px;
+    }
+  }
+}
 
 .main_consejos .noticia_rugrats {
   padding: 0;

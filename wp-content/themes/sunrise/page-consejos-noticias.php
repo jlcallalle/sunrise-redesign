@@ -64,16 +64,10 @@ get_header(); ?>
 																'total' => $pages,
 																'type' => 'plain'
 															) );
-
-														//echo "<pre>";
-														//print_r($link_page);
-														//echo "</pre>";
 														?>
 														<div class="pagination">
 															<?php echo $link_page; ?>
 														</div>
-
-
 			                    </div>
 			                    <?php ($post->ID == 331) ? $id=333 : $id=331; ?>
 			                    <a class="verpost" href="<?php echo get_permalink($id); ?>" >Ver <?php if($post->ID == 331) echo "Noticias"; else echo "Consejo"; ?></a>
