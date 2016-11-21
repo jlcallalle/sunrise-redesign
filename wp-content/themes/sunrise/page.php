@@ -327,10 +327,14 @@ get_header(); ?>
 				                      <div class="contenido_inner clearfix">
 				                      	<?php foreach($allNoticias->posts as $key => $noticia): ?>
 					                        <div class="box-noticia">
-					                          <div class="content_noticias"><a href="<?php echo get_permalink($noticia->ID); ?>" class="title_second"><?php echo get_the_title($noticia->ID); ?></a>
-					                            <p><a href="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>"><img src="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p>
+					                          <div class="content_noticias">
+																			<a href="<?php echo get_permalink($noticia->ID); ?>" class="title_second"><?php echo get_the_title($noticia->ID); ?></a>
+					                            <img src="<?php echo get_field('imagen_consejo_noticia',$noticia->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286">
+					                            <!-- <p><a href="<?php //echo get_field('imagen_consejo_noticia',$noticia->ID); ?>"><img src="<?php //echo get_field('imagen_consejo_noticia',$noticia->ID); ?>" alt="collage-modificado" width="391" height="288" class="alignnone wp-image-286"></a></p> -->
 					                          </div>
-					                          <div class="number"><em><strong><?php echo $noticia->post_content; ?></strong></em></div>
+																		<div class="desc_noticias">
+				                              <p><?php echo $noticia->post_content; ?></p>
+				                            </div>
 					                          <a href="<?php echo get_permalink($noticia->ID); ?>" class="link">Ver más</a>
 					                        </div>
 					                        <?php if ($key == 1) break; ?>
