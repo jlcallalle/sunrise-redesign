@@ -5052,7 +5052,7 @@ body {
 
 @media screen and (min-width: 830px) {
   .contenido_inner {
-    margin: 12px 0 0 0;
+    margin: 12px 0 15px 0;
     padding: 10px 0 0;
   }
 }

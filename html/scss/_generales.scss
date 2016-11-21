@@ -231,7 +231,7 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
     margin: 0;
     @include min-screen($tablet-l) {
       // margin: 40px 0 0 0;
-      margin: 12px 0 0 0;
+      margin: 12px 0 15px 0;
       padding: 10px 0 0;
     }
     img {
