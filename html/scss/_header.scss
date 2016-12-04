@@ -303,17 +303,17 @@ html {
     margin:5px 0 9px 20px;
     width: 85px;
     height: auto;
+}
 
-    // @include min-screen($movil-l) {
-    //     margin: 16px 0 16px 20px;
-    //     width: 175px;
-    // }
-    //
-    //
-    //  @include min-screen($tablet-l) {
-    //     margin: 9px 0 9px 20px;
-    //     width: auto;
-    // }
+.redes-mobile {
+  display: block;
+  float: right;
+  margin: 0 64px 0 0;
+  position: relative;
+  top: 31px;
+  @include min-screen($tablet-l) {
+      display: none;
+  }
 }
 
 .navegacion-principal {
@@ -494,4 +494,28 @@ html {
     }
 
 
+}
+
+
+
+.ico-facebook {
+    color: #0070b9;
+    font-size: 30px;
+    margin: 0 4px 0 0;
+    &:hover {
+      text-decoration: none;
+    }
+    @include min-screen($movil-l) {
+        margin: 0 8px 0 0;
+    }
+}
+
+
+.ico-twitter {
+    color: #3db1d9;
+    font-size: 30px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
 }

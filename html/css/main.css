@@ -4846,6 +4846,45 @@ div.list-wrapper {
   font-style: normal;
 }
 
+/*Icommon FUentes */
+@font-face {
+  font-family: 'sunrise';
+  src: url("../fonts/sunrise.eot?vmqe2h");
+  src: url("../fonts/sunrise.eot?vmqe2h#iefix") format("embedded-opentype"), url("../fonts/sunrise.ttf?vmqe2h") format("truetype"), url("../fonts/sunrise.woff?vmqe2h") format("woff"), url("../fonts/sunrise.svg?vmqe2h#sunrise") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sunrise' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook-square:before {
+  content: "\e902";
+}
+
+.icon-facebook:before {
+  content: "\e903";
+}
+
+.icon-twitter:before {
+  content: "\e900";
+}
+
+.icon-twitter-square:before {
+  content: "\e901";
+}
+
 .contenedor {
   max-width: 1024px;
   margin: 0 auto;
@@ -5526,6 +5565,20 @@ body {
   height: auto;
 }
 
+.redes-mobile {
+  display: block;
+  float: right;
+  margin: 0 64px 0 0;
+  position: relative;
+  top: 31px;
+}
+
+@media screen and (min-width: 830px) {
+  .redes-mobile {
+    display: none;
+  }
+}
+
 .navegacion-principal {
   float: right;
 }
@@ -5708,6 +5761,32 @@ body {
     padding: 0 13px;
     font-size: 16px;
   }
+}
+
+.ico-facebook {
+  color: #0070b9;
+  font-size: 30px;
+  margin: 0 4px 0 0;
+}
+
+.ico-facebook:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 530px) {
+  .ico-facebook {
+    margin: 0 8px 0 0;
+  }
+}
+
+.ico-twitter {
+  color: #3db1d9;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.ico-twitter:hover {
+  text-decoration: none;
 }
 
 /*Styles home*/
