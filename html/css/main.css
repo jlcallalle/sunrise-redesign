@@ -5710,12 +5710,36 @@ body {
   padding-right: 0;
 }
 
-@media screen and (min-width: 830px) {
-  .enlaces-navegacion-principal > li a:hover {
-    background: red;
-    border-radius: 13px;
-    color: #fff;
-  }
+.enlaces-navegacion-principal > li a {
+  color: white;
+}
+
+.enlaces-navegacion-principal > li a:hover {
+  color: white;
+}
+
+.enlaces-navegacion-principal > li.quienes {
+  background: #64b2ed;
+}
+
+.enlaces-navegacion-principal > li.pediatrica {
+  background: #edaf05;
+}
+
+.enlaces-navegacion-principal > li.especialidades {
+  background: #FF020C;
+}
+
+.enlaces-navegacion-principal > li.infraestructura {
+  background: #058782;
+}
+
+.enlaces-navegacion-principal > li.consejos {
+  background: #d17801;
+}
+
+.enlaces-navegacion-principal > li.citas {
+  background: #14981d;
 }
 
 .enlaces-navegacion-principal a {
@@ -6039,6 +6063,8 @@ label.error {
   .main_consejos a.verpost {
     margin: 0 50px 0 0;
     padding: 5px;
+    position: relative;
+    top: 18px;
   }
 }
 

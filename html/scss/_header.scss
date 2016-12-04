@@ -442,18 +442,39 @@ html {
 
 
         a {
+          color:white;
             &:hover {
+              color:white;
                  @include min-screen($tablet-l) {
-                    background: red;
-                    border-radius: 13px;
-                    color: #fff;
+
+                  //  background: red;
+                  //  border-radius: 13px;
+                  //  color: #fff;
                 }
             }
         }
 
+        &.quienes {
+          background: #64b2ed;
+        }
+
+        &.pediatrica {
+            background: #edaf05;
+        }
+        &.especialidades {
+           background: #FF020C;
+        }
+        &.infraestructura {
+           background: #058782;
+        }
+        &.consejos {
+          background: #d17801;
+        }
+        &.citas {
+          background: #14981d;
+        }
+
     }
-
-
 
     a {
         font-size: 14px;
