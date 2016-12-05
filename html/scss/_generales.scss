@@ -160,6 +160,13 @@ body {
     }
 }
 
+
+.box-video iframe {
+  @include max-screen(450px) {
+      width: 100%;
+  }
+}
+
 .title_rugrats {
     color: #ff8300;
     font-family: 'rugratsregular',arial;
