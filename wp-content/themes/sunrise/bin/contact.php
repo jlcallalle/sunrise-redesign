@@ -103,12 +103,6 @@ $mail->Subject  =  "[CONTACTO ".get_option("blogname")."] Mensaje de ".$name;
 $mail->Body     =  $body;
 $mail->AltBody  =  "This is the text-only body";
 
-
-if(!$mail->Send()) {
-  echo "Mailer Error: " . $mail->ErrorInfo;
-} else {
-  header('location: ' . site_url('/gracias/'));
-}
-
+header('location: ' . site_url('/gracias/'));
 ?>
 
