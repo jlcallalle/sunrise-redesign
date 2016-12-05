@@ -44,7 +44,7 @@
 <script>
   function initialize() {
   var styles = [];
-  var myLatlng = new google.maps.LatLng(-12.12810,-76.98624); 
+  var myLatlng = new google.maps.LatLng(-12.12810,-76.98624);
   var mapOptions = {
   zoom: 17,
   scrollwheel: false,
@@ -53,12 +53,12 @@
   styles: styles
   }
   var map = new google.maps.Map(document.getElementById('sunrise-mapa'), mapOptions);
-  
-  
+
+
   var marker = new google.maps.Marker({
   //icon: "images/iconos/mapa.png",
   icon: "<?php bloginfo( 'template_url' ); ?>/images/icono-mapa.png",
-  
+
   position: myLatlng,
   map: map,
   title: ''
@@ -181,18 +181,18 @@ if (typeof jQuery == 'undefined')
 	        <div class="contenedor-logo-y-navegacion-principal">
 	          <div class="logo-y-navegacion-principal">
 		          <a href="<?php echo get_option('home'); ?>/">
-		          	<img src="<?php bloginfo('template_directory');?>/images/logo.png" alt="Sunrise" width="217" height="60" class="logo-header">	          	
+		          	<img src="<?php bloginfo('template_directory');?>/images/logo.png" alt="Sunrise" width="217" height="60" class="logo-header">
 		          </a>
 	            <div class="redes-mobile"><a href="https://www.facebook.com/SunriseCentroPediatrico" target="_blank" class="ico-facebook icon-facebook-square"> </a><a href="https://twitter.com/Sunrise_CP" target="_blank" class="ico-twitter icon-twitter-square"></a></div>
 	            <nav class="navegacion-principal">
 	              <h1>Navegación Principal</h1><a class="boton-menu-principal"><span>Menu principal</span><span class="linea"></span></a>
 	              <ul class="enlaces-navegacion-principal">
-	                <li class="quienes"><a href="quienes-somos.html">Quiénes Somos</a></li>
-	                <li class="pediatrica"><a href="neumologia-pediatrica.html">Neumología Pediátrica</a></li>
-	                <li class="especialidades"><a href="especialidades.html">Especialidades</a></li>
-	                <li class="infraestructura"><a href="infraestructura.html">Infraestructura</a></li>
-	                <li class="consejos"><a href="consejos-y-noticias.html">Consejos y Noticias</a></li>
-	                <li class="citas"><a href="citas.html">Citas en Línea</a></li>
+	                <li class="quienes"><a href="<?php echo get_option('home'); ?>/quienes-somos/">Quiénes Somos</a></li>
+	                <li class="pediatrica"><a href="<?php echo get_option('home'); ?>/neumologia-pediatrica/">Neumología Pediátrica</a></li>
+	                <li class="especialidades"><a href="<?php echo get_option('home'); ?>/especialidades/">Especialidades</a></li>
+	                <li class="infraestructura"><a href="<?php echo get_option('home'); ?>/infraestructuras">Infraestructura</a></li>
+	                <li class="consejos"><a href="<?php echo get_option('home'); ?>/consejos-y-noticias/">Consejos y Noticias</a></li>
+	                <li class="citas"><a href="<?php echo get_option('home'); ?>/citas-en-linea/">Citas en Línea</a></li>
 	              </ul>
 	            </nav>
 	          </div>
