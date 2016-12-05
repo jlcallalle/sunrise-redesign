@@ -39,14 +39,34 @@
 
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-<!-- <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/base.css" type="text/css" media="screen" /> -->
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main.css" type="text/css" media="screen" />
-<!-- <link rel="stylesheet" href="<?php // bloginfo( 'template_url' ); ?>/js/flexslider/flexslider.css" type="text/css" media="screen" /> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkpV88uBZSgd2U-JpHX8XKxr4laJidP-I&amp;callback=initMap"></script>
+<script>
+  function initialize() {
+  var styles = [];
+  var myLatlng = new google.maps.LatLng(-12.12810,-76.98624); 
+  var mapOptions = {
+  zoom: 17,
+  scrollwheel: false,
+  center: myLatlng,
+  disableDefaultUI: true,
+  styles: styles
+  }
+  var map = new google.maps.Map(document.getElementById('sunrise-mapa'), mapOptions);
+  
+  
+  var marker = new google.maps.Marker({
+  //icon: "images/iconos/mapa.png",
+  icon: "<?php bloginfo( 'template_url' ); ?>/images/icono-mapa.png",
+  
+  position: myLatlng,
+  map: map,
+  title: ''
+  });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
-<!-- <link rel="stylesheet" href="<?php //bloginfo('template_directory'); ?>/js/selectbox/css/sexy-combo.css" rel="stylesheet" type="text/css" /> -->
-<!-- <link rel="stylesheet" href="<?php //bloginfo( 'template_url' ); ?>/js/fancybox2/jquery.fancybox.css?v=2.1.5" media="screen" /> -->
-
-<!-- <link rel="stylesheet" href="<?php //bloginfo( 'template_url' ); ?>/css/layout.css" type="text/css" media="screen" /> -->
 
 
 <?php if ( is_single() ) { ?>
@@ -157,6 +177,28 @@ if (typeof jQuery == 'undefined')
 
 		<?php }  ?>">
 
+		<header class="header-sitio">
+	        <div class="contenedor-logo-y-navegacion-principal">
+	          <div class="logo-y-navegacion-principal">
+		          <a href="<?php echo get_option('home'); ?>/">
+		          	<img src="<?php bloginfo('template_directory');?>/images/logo.png" alt="Sunrise" width="217" height="60" class="logo-header">	          	
+		          </a>
+	            <div class="redes-mobile"><a href="https://www.facebook.com/SunriseCentroPediatrico" target="_blank" class="ico-facebook icon-facebook-square"> </a><a href="https://twitter.com/Sunrise_CP" target="_blank" class="ico-twitter icon-twitter-square"></a></div>
+	            <nav class="navegacion-principal">
+	              <h1>Navegación Principal</h1><a class="boton-menu-principal"><span>Menu principal</span><span class="linea"></span></a>
+	              <ul class="enlaces-navegacion-principal">
+	                <li class="quienes"><a href="quienes-somos.html">Quiénes Somos</a></li>
+	                <li class="pediatrica"><a href="neumologia-pediatrica.html">Neumología Pediátrica</a></li>
+	                <li class="especialidades"><a href="especialidades.html">Especialidades</a></li>
+	                <li class="infraestructura"><a href="infraestructura.html">Infraestructura</a></li>
+	                <li class="consejos"><a href="consejos-y-noticias.html">Consejos y Noticias</a></li>
+	                <li class="citas"><a href="citas.html">Citas en Línea</a></li>
+	              </ul>
+	            </nav>
+	          </div>
+	        </div>
+      	</header>
+
 		<header class="header container">
 			<div class="clearfix header_inner">
 
@@ -240,7 +282,8 @@ if (typeof jQuery == 'undefined')
 
 
 			} elseif (is_page('26') or (is_page('29'))) {
-				echo '<iframe width="1600" height="385" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com.pe/maps/ms?msa=0&amp;msid=201076096626471681580.000505d3ac7c63376a3f4&amp;hl=es&amp;ie=UTF8&amp;t=m&amp;ll=-12.127693,-76.986206&amp;spn=0.002019,0.008578&amp;z=18&amp;output=embed"></iframe><br />';
+
+				echo '<div id="sunrise-mapa" class="sunrise-mapa"> </div>';
 
 
 			} else{
