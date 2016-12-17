@@ -160,12 +160,15 @@ body {
     }
 }
 
-
-.box-video iframe {
-  @include max-screen(450px) {
-      width: 100%;
+.box-video {
+  text-align: center;
+  iframe {
+    @include max-screen(450px) {
+        width: 100%;
+    }
   }
 }
+
 
 .title_rugrats {
     color: #ff8300;
@@ -344,17 +347,17 @@ transform: scale(1) rotate(18deg) translateX(0px) translateY(0px) skewX(0deg) sk
 .pagination span,
 .pagination a{
   display: inline-block;
-  height: 42px;
+  height: 35px;
   color: #fff;
-  width: 89px;
-  font-size: 14px;
+  width: 70px;
+  font-size: 11px;
   font-family: 'Arial_rounded_bold';
-  line-height: 42px;
+  line-height: 36px;
   text-align: center;
   text-decoration: none;
   margin: 0 5px 0 0;
 }
-
+ 
 .pagination span{
   background: #aaaaaa;
 }

@@ -1,18 +1,27 @@
-.content_slider {
-  // border:1px solid yellow;
-}
-
 /*Styles home*/
 .content_slider {
-	margin: 0 auto;
+ 	  margin: 0 auto;
     position: relative;
     z-index: 1;
     text-align: center;
+    display: none;
+    @include min-screen($tablet-l) {
+      display: block;
+    }
+      img {
+       width: 100%;
+       overflow: hidden;
+     }
 }
 
-.content_slider img {
-	width: 100%;
-	overflow: hidden;
+.content_slider_mobile {
+  display: block;
+  img {
+    width: 100%;
+  }
+  @include min-screen($tablet-l) {
+    display: none;
+  }
 }
 
 .header h1 {
@@ -40,9 +49,6 @@
     text-align: justify;
 }
 
-.home  .content_slider {
-    display: block!important;
-}
 
 
 .flexslider {
