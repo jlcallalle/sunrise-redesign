@@ -30,7 +30,28 @@ get_header(); ?>
 										  <div class="number"><em><strong><?php the_content(); ?></strong></em></div>
 										  <br>				                      
 					                      <div class="content_noticias">
-					                        <?php echo get_field('descripcion_completa'); ?>				                        
+					                        <?php echo get_field('descripcion_completa'); ?>					                       
+					                         <?php  
+					                         $the_post = get_post($post->ID); //Gets post ID
+					                         $the_excerpt = $the_post->post_content; //Gets post_content to be used as a basis for the excerpt      
+					                         $the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); //Strips tags and images 
+					                        ?>  
+					                        <div id="redes-sociales">
+					                            <a href="javascript:void(0);" data-url="http://www.facebook.com/sharer.php?u=<?php echo get_permalink($post->ID);?>" >Shared Facebook</a>
+					                            <a href="javascript:void(0);" data-url="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title($post->ID)); echo ': '.substr($the_excerpt, 0, 40).'... ';?>&url=<?php echo get_permalink($post->ID); ?>" >Shared Twitter</a>					                          
+					                           </span>
+					                        </div>	
+					                        <div class="comentarios-facebbok">
+					                         <div class="fb-comments" data-href="<?php echo get_permalink($post->ID); ?>" data-width="100%" data-numposts="5"></div>
+					                         <div id="fb-root"></div>
+					                        </div>
+					                         <script>(function(d, s, id) {
+					                         var js, fjs = d.getElementsByTagName(s)[0];
+					                         if (d.getElementById(id)) return;
+					                         js = d.createElement(s); js.id = id;
+					                         js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=1245105615551231";
+					                         fjs.parentNode.insertBefore(js, fjs);
+					                        }(document, 'script', 'facebook-jssdk'));</script> 	                        
 					                        <style>#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 * {        -moz-box-sizing: border-box;        box-sizing: border-box;      }      #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0 {        -moz-box-sizing: content-box;        box-sizing: content-box;        background-color: #FFFFFF;        display: inline-block;        height: 90px;        margin: 4px;        padding: 0px;        opacity: 1.00;        filter: Alpha(opacity=100);        text-align: center;        vertical-align: middle;        transition: all 0.3s ease 0s;-webkit-transition: all 0.3s ease 0s;        width: 180px;        z-index: 100;      }      #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover {        -ms-transform: scale(1.1);        -webkit-transform: scale(1.1);        backface-visibility: hidden;        -webkit-backface-visibility: hidden;        -moz-backface-visibility: hidden;        -ms-backface-visibility: hidden;        opacity: 1;        filter: Alpha(opacity=100);        transform: scale(1.1);        z-index: 102;        position: relative;      }      #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun2_0 {        border: 0px none #CCCCCC;        border-radius: 0;        box-shadow: 0px 0px 0px #888888;        display: inline-block;        height: 90px;        overflow: hidden;        width: 180px;      }      #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 {        background-color: rgba(255, 255, 255, 0.00);        display: inline-block;        font-size: 0;        max-width: 960px;        text-align: center;      }      #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumbnails_0 a {        border: none;        cursor: pointer;        text-decoration: none;      }      #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_0 {        display: inline-block;        text-align: center;      }            #bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover .bwg_title_spun1_0 {        left: 0px;        top: 0px;        opacity: 1;        filter: Alpha(opacity=100);      }      #bwg_container1_0 #bwg_container2_0 .bwg_title_spun2_0 {        color: #CCCCCC;        display: table-cell;        font-family: segoe ui;        font-size: 16px;        font-weight: bold;        height: inherit;        padding: 2px;        text-shadow: 0px 0px 0px #888888;        vertical-align: middle;        width: inherit;        word-wrap: break-word;      }      /*pagination styles*/      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 {        text-align: center;        font-size: 12px;        font-family: segoe ui;        font-weight: bold;        color: #666666;        margin: 6px 0 4px;        display: block;        height: 30px;        line-height: 30px;      }      @media only screen and (max-width : 320px) {        #bwg_container1_0 #bwg_container2_0 .displaying-num_0 {          display: none;        }      }      #bwg_container1_0 #bwg_container2_0 .displaying-num_0 {        font-size: 12px;        font-family: segoe ui;        font-weight: bold;        color: #666666;        margin-right: 10px;        vertical-align: middle;      }      #bwg_container1_0 #bwg_container2_0 .paging-input_0 {        font-size: 12px;        font-family: segoe ui;        font-weight: bold;        color: #666666;        vertical-align: middle;      }      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled,      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled:hover,      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a.disabled:focus {        cursor: default;        color: rgba(102, 102, 102, 0.5);      }      #bwg_container1_0 #bwg_container2_0 .tablenav-pages_0 a {        cursor: pointer;        font-size: 12px;        font-family: segoe ui;        font-weight: bold;        color: #666666;        text-decoration: none;        padding: 3px 6px;        margin: 0;        border-radius: 0;        border-style: solid;        border-width: 1px;        border-color: #E3E3E3;        background-color: #FFFFFF;        opacity: 1.00;        filter: Alpha(opacity=100);        box-shadow: 0;        transition: all 0.3s ease 0s;-webkit-transition: all 0.3s ease 0s;      }      #bwg_container1_0 #bwg_container2_0 .bwg_back_0 {        background-color: rgba(0, 0, 0, 0);        color: #000000 !important;        cursor: pointer;        display: block;        font-family: segoe ui;        font-size: 16px;        font-weight: bold;        text-decoration: none;        padding: 0;      }      #bwg_container1_0 #bwg_container2_0 #spider_popup_overlay_0 {        background-color: #000000;        opacity: 0.70;        filter: Alpha(opacity=70);      }     .bwg_play_icon_spun_0	 {        width: inherit;        height: inherit;        display: table;        position: absolute;      }	      .bwg_play_icon_0 {        color: #CCCCCC;        font-size: 32px;        vertical-align: middle;        display: table-cell !important;        z-index: 1;        text-align: center;        margin: 0 auto;      }</style>
 					                        <div id="bwg_container1_0">
 					                          <div id="bwg_container2_0">
@@ -65,5 +86,63 @@ get_header(); ?>
 				</div><!--End content_inner -->
 		</div><!--End content -->
 </div>
+<script>
+$(document).ready(function(){
 
+	//Start compartir en redes sociales
+	 $(document).on('click', '#redes-sociales > a', function(){
+	   
+	   var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+	   var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+	   var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+	   var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+	   var w = "";
+	   var h = "";
+	   var top = "";
+	   var left = "";
+	   var url = $(this).attr('data-url');
+	   var domain = url.split("/")[2];
+
+	   switch(domain) {
+	       case "www.facebook.com":
+	           w=585;
+	           h=368;              
+	           break;
+	       case "twitter.com":
+	           w=585;
+	           h=320;
+	           break;
+	       case "plus.google.com":
+	           w=517;
+	           h=511;
+	           break;
+	       case "mail.google.com":
+	           w=517;
+	           h=511;
+	           break;
+	       case "pinterest.com":
+	           w=517;
+	           h=511;
+	           break;
+	       case "www.linkedin.com":
+	           w=517;
+	           h=511;
+	           break;
+	       default:
+	           w=517;
+	           h=511;
+	   }
+
+	   var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+	   var top = ((height / 2) - (h / 2)) + dualScreenTop;
+
+	   window.open(url, 'sharer', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+	   return false;
+	 });
+	 //End compartir en redes sociales
+
+});
+</script>
 <?php get_footer(); ?>
