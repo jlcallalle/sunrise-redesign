@@ -66,7 +66,7 @@ Template Name: Home
 									</div> 
 								</div>
 								<div class="box-video">
-									<iframe width="400" height="225" src="https://www.youtube.com/embed/hZAZoRoUU7k" frameborder="0" allowfullscreen></iframe>
+									<iframe width="400" height="225" src="https://www.youtube.com/embed/IZ-35LtDLjA?rel=0" frameborder="0" allowfullscreen></iframe>
                     			</div>
 							</div>
 
