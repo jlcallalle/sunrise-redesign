@@ -12,6 +12,20 @@
       top:18px;
     }
   }
+  .contenido_inner {
+    //margin:0 0 15px;
+  }
+  .title_second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    //min-height: 64px;
+  }
+  .box-noticia {
+    min-height: 404px;
+    margin:0 5% 3% 0;
+  }
 }
 
 .main_consejos .noticia_rugrats {
