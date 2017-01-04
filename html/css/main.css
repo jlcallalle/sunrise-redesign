@@ -5824,7 +5824,7 @@ body {
 }
 
 /*Styles home*/
-.content_slider {
+.home .wrapper .content_slider {
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -5833,12 +5833,12 @@ body {
 }
 
 @media screen and (min-width: 830px) {
-  .content_slider {
+  .home .wrapper .content_slider {
     display: block;
   }
 }
 
-.content_slider img {
+.home .wrapper .content_slider img {
   width: 100%;
   overflow: hidden;
 }

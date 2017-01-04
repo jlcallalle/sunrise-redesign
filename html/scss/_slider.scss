@@ -1,17 +1,22 @@
 /*Styles home*/
-.content_slider {
- 	  margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    display: none;
-    @include min-screen($tablet-l) {
-      display: block;
+
+.home {
+  .wrapper {
+    .content_slider {
+     	  margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        display: none;
+        @include min-screen($tablet-l) {
+          display: block;
+        }
+          img {
+           width: 100%;
+           overflow: hidden;
+         }
     }
-      img {
-       width: 100%;
-       overflow: hidden;
-     }
+  }
 }
 
 .content_slider_mobile {

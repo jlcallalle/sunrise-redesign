@@ -294,3 +294,4 @@ if (typeof jQuery == 'undefined')
 
 
 		</div>
+		<div class="content_slider_mobile"><img src="<?php bloginfo('template_directory');?>/images/slider-mobile.png" alt=""></div>
