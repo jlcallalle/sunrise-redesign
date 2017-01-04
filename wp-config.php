@@ -16,53 +16,23 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
-//define('DB_NAME', 'sunrise_2015');
+define('DB_NAME', 'sunrise');
 
 /** Tu nombre de usuario de MySQL */
-//define('DB_USER', 'sunrise_admin');
+define('DB_USER', 'root');
 
 /** Tu contraseña de MySQL */
-//define('DB_PASSWORD', 'tSbnOhg^h-{o');
+define('DB_PASSWORD', '');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
-//define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost');
 
 /** Codificación de caracteres para la base de datos. */
-//define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8');
 
 /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
-//define('DB_COLLATE', '');
-
-switch (getenv('APPLICATION_ENV')) {
-    case 'development': 
-        define('DB_NAME', getenv('DB_NAME'));
-        define('DB_USER', getenv('DB_USER'));
-        define('DB_PASSWORD', getenv('DB_PASSWORD'));
-        define('DB_HOST', getenv('DB_HOST'));
-        define('WP_SITEURL', getenv('WP_SITEURL')); 
-        define('WP_HOME', getenv('WP_HOME'));
-        ini_set('max_execution_time', 300);
-        break;
-    case 'testing': 
-        define('DB_NAME', 'sunrise');
-        define('DB_USER', 'sunrise');
-        define('DB_PASSWORD', 'p6sYLeCHVGFFhasb');
-        define('DB_HOST', 'localhost');
-        define('WP_SITEURL', 'http://app-sunrise.sanderss.com/'); 
-        define('WP_HOME', 'http://app-sunrise.sanderss.com/');
-        break;
-    default: 
-        define('DB_NAME', 'sunrise_2015');
-        define('DB_USER', 'sunrise_admin');
-        define('DB_PASSWORD', 'tSbnOhg^h-{o');
-        define('DB_HOST', 'localhost');
-        define('WP_SITEURL', 'http://www.perurail.com'); 
-        define('WP_HOME', 'http://www.perurail.com');
-        break;
-}
-
-define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
+
 /**#@+
  * Claves únicas de autentificación.
  *
@@ -114,7 +84,7 @@ define('WP_DEBUG', false);
 
 /** WordPress absolute path to the Wordpress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+    define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
