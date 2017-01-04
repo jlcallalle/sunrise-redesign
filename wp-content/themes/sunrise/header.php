@@ -128,35 +128,7 @@
 
 <?php wp_head(); ?>
 
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.0.min.js"></script>
 
-<script type="text/javascript">
-if (typeof jQuery == 'undefined')
-{
-    document.write(unescape("%3Cscript src='<?php bloginfo( 'template_url' ); ?>/js/jquery-1.8.2.min.js' type='text/javascript'%3E%3C/script%3E"));
-}
-</script>
-
-
-<!--[if lt IE 9]>
-
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie-only.css" type="text/css" media="screen" />
-  	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/selectivizr.js"></script>
-  	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/css3-mediaqueries.js"></script>
-
-<![endif]-->
-
-<script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script>
-
-
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/normalize.js"></script>
-
-<style>
-
-
-
-</style>
 </head>
 <body <?php body_class(); ?>>
 
@@ -291,6 +263,5 @@ if (typeof jQuery == 'undefined')
 			}
 			?>
 
-
-
 		</div>
+		<div class="content_slider_mobile"><img src="images/slider-mobile.png" alt=""></div>
