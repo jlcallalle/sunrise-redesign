@@ -265,3 +265,5 @@
 
 		</div>
 		<div class="content_slider_mobile"><img src="<?php bloginfo('template_directory');?>/images/slider-mobile.png" alt=""></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim necessitatibus quis sunt magnam consectetur obcaecati explicabo accusamus ipsa qui provident. In laboriosam alias consequuntur fugiat voluptatem dolore nisi ex non!</p>
+
