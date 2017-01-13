@@ -37,8 +37,8 @@ get_header(); ?>
 					                         $the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); //Strips tags and images 
 					                        ?>  
 					                        <div id="redes-sociales">
-					                            <a href="javascript:void(0);" data-url="http://www.facebook.com/sharer.php?u=<?php echo get_permalink($post->ID);?>" >Shared Facebook</a>
-					                            <a href="javascript:void(0);" data-url="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title($post->ID)); echo ': '.substr($the_excerpt, 0, 40).'... ';?>&url=<?php echo get_permalink($post->ID); ?>" >Shared Twitter</a>					                          
+					                            <a class="icon-facebook-square" href="javascript:void(0);" data-url="http://www.facebook.com/sharer.php?u=<?php echo get_permalink($post->ID);?>" >Shared Facebook</a>
+					                            <a class="icon-twitter-square" href="javascript:void(0);" data-url="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title($post->ID)); echo ': '.substr($the_excerpt, 0, 40).'... ';?>&url=<?php echo get_permalink($post->ID); ?>" >Shared Twitter</a>					                          
 					                           </span>
 					                        </div>	
 					                        <div class="comentarios-facebbok">
