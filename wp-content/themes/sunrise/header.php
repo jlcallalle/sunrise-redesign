@@ -298,7 +298,7 @@ if (typeof jQuery == 'undefined')
 			if ( !is_page('26') or (!is_page('29')) ) {	
 				echo '<div class="content_slider_mobile">
 					<img src='.bloginfo('template_directory').'/images/slider-mobile.png" alt="">  
-				</div>'		
+				</div>';		
 			} 
 		?>
 
