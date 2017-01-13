@@ -465,7 +465,7 @@ get_header(); ?>
 									<div class="contentido_formulario">
 										<div class="contentido_formulario_inner">
 
-											<form id="contact_form" action="<?php bloginfo('template_url'); ?>/bin/contact.php" method="post" class="quick_contact clearfix">
+											<form id="contact_form" action="<?php bloginfo('template_url'); ?>/bin/contact.php" method="post" class="quick_contact clearfix" novalidate="novalidate>
 											<!-- <form id="contact_form" action="#" method="post" class="contact_form clearfix"> -->
 												<fieldset class="form_content_1" id="form_content_1">
 													<p class="clearfix content_label">
