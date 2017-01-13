@@ -17,7 +17,8 @@
 						<li><a href="<?php echo get_option('home'); ?>/citas-en-linea/">Citas en Línea</a></li>
 					</ul>
 					<div class="derechos">
-						<p>SunRise© 2015 | Todos los Derechos Reservados </p>
+						<!--<p>SunRise© 2015 | Todos los Derechos Reservados </p>-->
+						<p>SunRise© <?php echo date("Y"); ?> | Todos los Derechos Reservados </p>
 					</div>
 				</div>
 				<div class="tren fadeInDown animated"></div>
