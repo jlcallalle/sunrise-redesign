@@ -36,7 +36,7 @@ get_header(); ?>
 					                         $the_excerpt = $the_post->post_content; //Gets post_content to be used as a basis for the excerpt      
 					                         $the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); //Strips tags and images 
 					                        ?>  
-					                        <div id="redes-sociales">
+					                        <div id="redes-sociales" class="redes-sociales">
 					                            <a class="icon-facebook-square" href="javascript:void(0);" data-url="http://www.facebook.com/sharer.php?u=<?php echo get_permalink($post->ID);?>" >Shared Facebook</a>
 					                            <a class="icon-twitter-square" href="javascript:void(0);" data-url="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title($post->ID)); echo ': '.substr($the_excerpt, 0, 40).'... ';?>&url=<?php echo get_permalink($post->ID); ?>" >Shared Twitter</a>					                          
 					                           </span>
