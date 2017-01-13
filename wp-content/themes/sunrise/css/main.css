@@ -5256,6 +5256,10 @@ body {
   background-color: #eeeeee;
 }
 
+.redes-sociales {
+  padding: 30px 0;
+}
+
 .redes-sociales .icon-facebook-square {
   background: #4267b2 none repeat scroll 0 0;
   border-radius: 4px;
@@ -5270,9 +5274,12 @@ body {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 11px;
   font-weight: bold;
-  padding: 0 0 0 7px;
   position: relative;
   top: -3px;
+}
+
+.redes-sociales .icon-facebook-square:hover {
+  text-decoration: none;
 }
 
 .redes-sociales .icon-twitter {
@@ -5287,9 +5294,12 @@ body {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 11px;
   font-weight: bold;
-  margin: 0 0 0 7px;
   position: relative;
   top: -3px;
+}
+
+.redes-sociales .icon-twitter:hover {
+  text-decoration: none;
 }
 
 .header {
