@@ -6197,6 +6197,24 @@ label.error {
   margin: 0 0 14px;
 }
 
+.content_noticias {
+  padding: 0 0 12px 0;
+}
+
+.content_noticias .number {
+  font-weight: normal;
+  color: black;
+  float: none;
+}
+
+.content_noticias ol li {
+  margin: 0 0 14px;
+}
+
+.content_noticias ul li {
+  margin: 0 0 14px;
+}
+
 /* ---------------------------
    consejos
    --------------------------- */
