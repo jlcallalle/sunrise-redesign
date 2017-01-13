@@ -296,7 +296,7 @@ if (typeof jQuery == 'undefined')
 		</div>
 		<?php
 			if ( !is_page('26') or (!is_page('29')) ) {	
-				echo '<div class="content_slider_mobile"><img src='.get_bloginfo('template_directory').'/images/slider-mobile.png" alt=""> </div>';		
+				echo '<div class="content_slider_mobile"><img src="'.get_bloginfo('template_directory').'/images/slider-mobile.png" alt=""> </div>';		
 			} 
 		?>
 
