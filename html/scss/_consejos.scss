@@ -88,6 +88,28 @@
     }
 }
 
+
+.contenido_noticia  {
+    padding: 0 0 12px 0;
+
+    .number {
+      font-weight:normal;
+      color:black;
+      float:none;
+    }
+    ol {
+      li {
+        margin:0 0 14px;
+      }
+    }
+    ul {
+      li {
+        margin:0 0 14px;
+      }
+    }
+}
+
+
 /* ---------------------------
    consejos
    --------------------------- */

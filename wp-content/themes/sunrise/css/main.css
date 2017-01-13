@@ -6215,6 +6215,24 @@ label.error {
   margin: 0 0 14px;
 }
 
+.contenido_noticia {
+  padding: 0 0 12px 0;
+}
+
+.contenido_noticia .number {
+  font-weight: normal;
+  color: black;
+  float: none;
+}
+
+.contenido_noticia ol li {
+  margin: 0 0 14px;
+}
+
+.contenido_noticia ul li {
+  margin: 0 0 14px;
+}
+
 /* ---------------------------
    consejos
    --------------------------- */
