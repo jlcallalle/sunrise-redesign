@@ -6183,6 +6183,20 @@ label.error {
   padding: 0 0 12px 0;
 }
 
+.content_consejo .number {
+  font-weight: normal;
+  color: black;
+  float: none;
+}
+
+.content_consejo ol li {
+  margin: 0 0 14px;
+}
+
+.content_consejo ul li {
+  margin: 0 0 14px;
+}
+
 /* ---------------------------
    consejos
    --------------------------- */
