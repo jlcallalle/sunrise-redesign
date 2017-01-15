@@ -1,14 +1,5 @@
-
 <?php
-
 	require( '../../../../wp-load.php' );
-
-
-	//validando los campos
-	// if ((isset($_POST['name'])) && (strlen(trim($_POST['name'])) > 0)) {
-	// 	$name = stripslashes(strip_tags($_POST['name']));
-	// } else {$name = 'No name entered';}
-	
 
 	if ((isset($_POST['name'])) && (strlen(trim($_POST['name'])) > 0)) {
 		$name = stripslashes(strip_tags($_POST['name']));
@@ -23,7 +14,6 @@
 		$email = stripslashes(strip_tags($_POST['email']));
 	} else {$email = 'No email entered';}
 
-
 	if ((isset($_POST['select'])) && (strlen(trim($_POST['select'])) > 0)) {
 		$select = stripslashes(strip_tags($_POST['select']));
 	} else {$select = 'No select entered';}
@@ -32,9 +22,6 @@
 		$comments = stripslashes(strip_tags($_POST['comments']));
 	} else {$comments = 'No comments entered';}
 
-
-	
-	
 	//generando el HTML
 	ob_start();
 		?>
@@ -57,7 +44,7 @@
 		<td>Correo</td>
 		<td><?=$email;?></td>
 	</tr>
-	
+
 	<tr>
 		<td>Especialidad:</td>
 		<td><?=$select;?></td>
@@ -66,7 +53,7 @@
 		<td>Comentario::</td>
 		<td><?=$comments;?></td>
 	</tr>
-	
+
 </table>
 </body>
 </html>
@@ -79,13 +66,7 @@ $fifth = 'lumacastro02@hotmail.com';
 $test1 = 'jlcallalle@gmail.com';
 $test2 = 'jhonny.0589@gmail.com';
 
-//$info = 'info@stugra.com';
-
-
 $body = ob_get_contents();
-//$to = 'jlcallalle@gmail.com';
-//$email = 'jlcallalle@gmail.com';
-//$fromaddress = "jorge_luis_dt@hotmail.com";
 $fromname = "Online Contact";
 
 require("class.phpmailer.php");
@@ -93,7 +74,6 @@ require("class.phpmailer.php");
 $mail = new PHPMailer();
 
 $mail->From     = $admin_email;
-// $mail->FromName = "Contact Website Form";
 $mail->FromName = "[CITAS ".get_option("blogname")."] Mensaje de ".$name;
 
 $mail->AddAddress($admin_email,"Sounrise");
@@ -104,13 +84,12 @@ $mail->AddAddress($fifth, "Contacto");
 $mail->AddAddress($test1, "Contacto");
 $mail->AddAddress($test2, "Contacto");
 
-//$mail->AddAddress($info, "Contact3");
 
 $mail->WordWrap = 50;
 $mail->IsHTML(true);
 
 // $mail->Subject  =  "Contact Website Form";
-$mail->Subject  =  "[CONTACTO ".get_option("blogname")."] Mensaje de ".$name;
+$mail->Subject  =  "[CITAS ".get_option("blogname")."] Mensaje de ".$name;
 $mail->Body     =  $body;
 $mail->AltBody  =  "This is the text-only body";
 
@@ -122,4 +101,3 @@ if(!$mail->Send()) {
 }
 
 ?>
-

@@ -1,14 +1,5 @@
-
 <?php
-
-	require( '../../../../wp-load.php' );
-
-
-	//validando los campos
-	// if ((isset($_POST['name'])) && (strlen(trim($_POST['name'])) > 0)) {
-	// 	$name = stripslashes(strip_tags($_POST['name']));
-	// } else {$name = 'No name entered';}
-	
+require( '../../../../wp-load.php' );
 
 if ((isset($_POST['name'])) && (strlen(trim($_POST['name'])) > 0)) {
 		$name = stripslashes(strip_tags($_POST['name']));
@@ -26,12 +17,9 @@ if ((isset($_POST['name'])) && (strlen(trim($_POST['name'])) > 0)) {
 		$comments = stripslashes(strip_tags($_POST['comments']));
 	} else {$comments = 'No comments entered';}
 
-
-	
-	
 	//generando el HTML
 	ob_start();
-		?>
+	?>
 <html>
 <head>
 </head>
@@ -55,7 +43,7 @@ if ((isset($_POST['name'])) && (strlen(trim($_POST['name'])) > 0)) {
 		<td>Comentarios:</td>
 		<td><?=$comments;?></td>
 	</tr>
-	
+
 </table>
 </body>
 </html>
@@ -68,13 +56,7 @@ $fifth = 'lumacastro02@hotmail.com';
 $test1 = 'jlcallalle@gmail.com';
 $test2 = 'jhonny.0589@gmail.com';
 
-//$info = 'info@stugra.com';
-
-
 $body = ob_get_contents();
-//$to = 'jlcallalle@gmail.com';
-//$email = 'jlcallalle@gmail.com';
-//$fromaddress = "jorge_luis_dt@hotmail.com";
 $fromname = "Online Contact";
 
 require("class.phpmailer.php");
@@ -82,7 +64,6 @@ require("class.phpmailer.php");
 $mail = new PHPMailer();
 
 $mail->From     = $admin_email;
-// $mail->FromName = "Contact Website Form";
 $mail->FromName = "[CONTACTO ".get_option("blogname")."] Mensaje de ".$name;
 
 $mail->AddAddress($admin_email,"Sounrise");
@@ -93,7 +74,6 @@ $mail->AddAddress($fifth, "Contacto");
 $mail->AddAddress($test1, "Contacto");
 $mail->AddAddress($test2, "Contacto");
 
-//$mail->AddAddress($info, "Contact3");
 
 $mail->WordWrap = 50;
 $mail->IsHTML(true);
@@ -103,12 +83,9 @@ $mail->Subject  =  "[CONTACTO ".get_option("blogname")."] Mensaje de ".$name;
 $mail->Body     =  $body;
 $mail->AltBody  =  "This is the text-only body";
 
-//header('location: ' . site_url('/gracias/'));
 if(!$mail->Send()) {
   echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
   header('location: ' . site_url('/gracias/'));
 }
-
 ?>
-
