@@ -10,20 +10,18 @@
 				<div class="clearfix footer_inner">
 					<ul class="lista_footer list_reset clearfix">
 						<li><a href="<?php echo get_option('home'); ?>/quienes-somos/">Quiénes Somos</a></li>
-						<li><a href="<?php echo get_option('home'); ?>/">Neumología Pediátrica</a></li>
-						<li><a href="<?php echo get_option('home'); ?>/">Especialidades</a></li>
+						<li><a href="<?php echo get_option('home'); ?>/neumologia-pediatrica/">Neumología Pediátrica</a></li>
+						<li><a href="<?php echo get_option('home'); ?>/especialidades/">Especialidades</a></li>
 						<li><a href="<?php echo get_option('home'); ?>/infraestructuras/">Infraestructura</a></li>
 						<li><a href="<?php echo get_option('home'); ?>/consejos-y-noticias/">Noticias</a></li>
 						<li><a href="<?php echo get_option('home'); ?>/citas-en-linea/">Citas en Línea</a></li>
+						<li><a href="<?php echo get_option('home'); ?>/contactenos/">Contáctenos</a></li>
 					</ul>
 					<div class="derechos">
-						<!--<p>SunRise© 2015 | Todos los Derechos Reservados </p>-->
 						<p>SunRise© <?php echo date("Y"); ?> | Todos los Derechos Reservados </p>
 					</div>
 				</div>
 				<div class="tren fadeInDown animated"></div>
-
-				<!-- <div class="tren animated wow fadeInRight" data-wow-delay=".5s"></div> -->
 
 			</footer>
 			<!-- </div> -->
@@ -35,7 +33,7 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/validate/jquery.validate.min.js"></script>
 
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/validate/messages_es.js"></script>
-<?php /*?><script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/contact.js"></script><?php */?>
+<?php ?><script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/contact.js"></script><?php ?>
 
 <script type="text/javascript">
 
@@ -127,12 +125,6 @@ jQuery(function() {
 		jQuery('input, textarea').placeholder();
 	});
 </script>
-
-
-
-
-
-
 
 
 
