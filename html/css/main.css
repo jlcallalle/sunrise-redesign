@@ -5256,6 +5256,52 @@ body {
   background-color: #eeeeee;
 }
 
+.redes-sociales {
+  padding: 30px 0;
+}
+
+.redes-sociales .icon-facebook-square {
+  background: #4267b2 none repeat scroll 0 0;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  margin: 0 19px 0 0;
+  padding: 2px 4px;
+}
+
+.redes-sociales .icon-facebook-square span {
+  color: white;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  position: relative;
+  top: -3px;
+}
+
+.redes-sociales .icon-facebook-square:hover {
+  text-decoration: none;
+}
+
+.redes-sociales .icon-twitter {
+  background: #1b95e0 none repeat scroll 0 0;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  padding: 2px 4px;
+}
+
+.redes-sociales .icon-twitter span {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  position: relative;
+  top: -3px;
+}
+
+.redes-sociales .icon-twitter:hover {
+  text-decoration: none;
+}
+
 .header {
   display: none;
 }
@@ -5857,6 +5903,14 @@ body {
   }
 }
 
+.contactenos .content_slider_mobile {
+  display: none;
+}
+
+.citas-en-linea .content_slider_mobile {
+  display: none;
+}
+
 .header h1 {
   float: right;
   margin: 0 0 1em;
@@ -6109,7 +6163,7 @@ label.error {
 }
 
 .main_consejos .box-noticia {
-  min-height: 404px;
+  min-height: 415px;
   margin: 0 5% 3% 0;
 }
 
@@ -6135,6 +6189,55 @@ label.error {
 
 .content_consejo {
   padding: 0 0 12px 0;
+}
+
+.content_consejo .number {
+  font-weight: normal;
+  color: black;
+  float: none;
+}
+
+.content_consejo ol li {
+  margin: 0 0 14px;
+}
+
+.content_consejo ul li {
+  margin: 0 0 14px;
+}
+
+.content_noticias {
+  padding: 0 0 12px 0;
+}
+
+.content_noticias .number {
+  font-weight: normal;
+  color: black;
+  float: none;
+}
+
+.content_noticias ol li {
+  margin: 0 0 14px;
+}
+
+.content_noticias ul li {
+  margin: 0 0 14px;
+}
+
+.contenido_noticia {
+  padding: 0 0 12px 0;
+}
+
+.contenido_noticia .number {
+  font-weight: normal;
+  float: none;
+}
+
+.contenido_noticia ol li {
+  margin: 0 0 14px;
+}
+
+.contenido_noticia ul li {
+  margin: 0 0 14px;
 }
 
 /* ---------------------------

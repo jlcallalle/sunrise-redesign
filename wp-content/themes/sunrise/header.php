@@ -35,7 +35,7 @@
 
 <!-- Mobile viewport optimized: h5bp.com/viewport -->
 <meta name="keywords" content="<?php bloginfo('description'); ?>" />
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -294,4 +294,9 @@ if (typeof jQuery == 'undefined')
 
 
 		</div>
-		<div class="content_slider_mobile"><img src="<?php bloginfo('template_directory');?>/images/slider-mobile.png" alt=""></div>
+		<?php
+			if ( !is_page('26') or (!is_page('29')) ) {	
+				echo '<div class="content_slider_mobile"><img src="'.get_bloginfo('template_directory').'/images/slider-mobile.png" alt=""> </div>';		
+			} 
+		?>
+

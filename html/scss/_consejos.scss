@@ -23,7 +23,8 @@
     //min-height: 64px;
   }
   .box-noticia {
-    min-height: 404px;
+    //min-height: 404px;
+    min-height: 415px;
     margin:0 5% 3% 0;
   }
 }
@@ -50,7 +51,65 @@
 
 .content_consejo {
     padding: 0 0 12px 0;
+
+    .number {
+      font-weight:normal;
+      color:black;
+      float:none;
+    }
+    ol {
+      li {
+        margin:0 0 14px;
+      }
+    }
+    ul {
+      li {
+        margin:0 0 14px;
+      }
+    }
 }
+
+.content_noticias {
+    padding: 0 0 12px 0;
+
+    .number {
+      font-weight:normal;
+      color:black;
+      float:none;
+    }
+    ol {
+      li {
+        margin:0 0 14px;
+      }
+    }
+    ul {
+      li {
+        margin:0 0 14px;
+      }
+    }
+}
+
+
+.contenido_noticia  {
+    padding: 0 0 12px 0;
+
+    .number {
+      font-weight:normal;
+      //color:black;
+      float:none;
+    }
+    ol {
+      li {
+        margin:0 0 14px;
+      }
+    }
+    ul {
+      li {
+        margin:0 0 14px;
+      }
+    }
+}
+
 
 /* ---------------------------
    consejos
