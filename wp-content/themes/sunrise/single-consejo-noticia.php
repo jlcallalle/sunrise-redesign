@@ -18,7 +18,7 @@ get_header(); ?>
 						<div class="clearfix main_content_inner">							
 							<div class="content_main clearfix">
 								<div class="content_left_inner">
-									<h2 class="title_rugrats">Consejo</h2><a href="<?php echo get_option('home'); ?>/consejos-y-noticias/" class="verpost">Regresar</a>								
+									<h2 class="title_rugrats">Consejo</h2><a href="javascript:window.history.back();" class="verpost">Regresar</a>								
 									<div class="contenido_noticia">
 					                      <div class="content_noticias">
 					                        <h3 class="title_second"><?php the_title();?></h3>
