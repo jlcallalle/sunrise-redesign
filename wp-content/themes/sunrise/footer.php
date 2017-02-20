@@ -18,70 +18,27 @@
 						<li><a href="<?php echo get_option('home'); ?>/contactenos/">Contáctenos</a></li>
 					</ul>
 					<div class="derechos">
-						<p>SunRise© <?php echo date("Y"); ?> | Todos los Derechos Reservados </p>
+						<p>SunRise© <?php echo date("Y"); ?>  </p>
 					</div>
 				</div>
 				<div class="tren fadeInDown animated"></div>
 
 			</footer>
+
+			<div class="fixed-fono">
+		        <div class="fono"><span class="fono-casa"><i class="icon-phone4"></i>  <a href="tel:012751124">2751124</a></span><span class="fono-cel">
+                           <i class="icon-phone"></i> <a href="tel:945395469">945395469</a>  </span><span class="fono-cita">
+                           <i class="icon-whatsapp"></i> <a href="tel:995777555">995777555</a>  </span></div>
+		    </div>
+
 			<!-- </div> -->
 </div><!--End wrapper -->
 
 
 
-
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/validate/jquery.validate.min.js"></script>
-
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/validate/messages_es.js"></script>
-<?php ?><script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/contact.js"></script><?php ?>
-
-<script type="text/javascript">
-
-/* Important Delete if contact.js is active */
-
-jQuery(function() {
-	jQuery('#contact_form').validate();
-});
-
-</script>
-
-
-<?php  /* ?>
-<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/fancybox/jquery.fancybox-1.3.4.js"></script>
-<script type="text/javascript">
-	jQuery(function(){ 
-		
-		jQuery(".fancybox").fancybox({
-			titlePosition	: 'inside',
-			transitionIn	: 'elastic',
-			transitionOut	: 'none',
-			autoDimensions	: false,
-			width			: 586,
-			height			: 371,
-			titleShow		: false,
-			margin			: 0,
-			padding			: 0,
-			showCloseButton	: false,
-			onStart	: function() {
-				jQuery('#fancybox-outer').css('background-color','transparent');
-				jQuery('.fancybox-bg').hide();
-			}
-		});
-		
-		jQuery('.close_link').click(function () { 
-		  jQuery.fancybox.close();
-		  return false;
-		});
-		
-	}); 
-</script>
-<?php */ ?>
-
-
 <!-- Add fancyBox 2 main JS and CSS files -->
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/fancybox2/jquery.fancybox.js?v=2.1.5"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/fancybox2/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-<!-- <script type="text/javascript" src="<?php // bloginfo( 'template_url' ); ?>/js/modals.js"></script> -->
 
 
 <script type="text/javascript">
@@ -103,7 +60,6 @@ jQuery(function() {
 <script type="text/javascript" src="<?php  bloginfo('template_directory'); ?>/js/flexslider/jquery.flexslider-min.js"></script> 
 
 <script type="text/javascript" src="<?php  bloginfo('template_directory'); ?>/js/min/recursos.min.js"></script> 
-<script type="text/javascript" src="<?php  bloginfo('template_directory'); ?>/js/main.js"></script> 
 
 <input type="hidden" name="template_url" id="template_url" value="<?php bloginfo('template_url'); ?>">
 <input type="hidden" name="site_url" id="site_url" value="<?php echo get_site_url(); ?>">
@@ -112,7 +68,6 @@ jQuery(function() {
 <script type="text/javascript">
 		$(window).load(function() {
 			$('.flexslider').flexslider({
-	
 
 			});
 		});
@@ -125,8 +80,6 @@ jQuery(function() {
 		jQuery('input, textarea').placeholder();
 	});
 </script>
-
-
 
 
 <?php wp_footer(); ?>

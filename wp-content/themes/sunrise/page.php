@@ -459,7 +459,7 @@ get_header(); ?>
 							<div class="content_left clearfix">
 								<div class="content_left_inner">
 									<h2 class="title_rugrats">Contactenos</h2>
-									<p>En Sunrise queremos tener el mejor servicio. Cuéntenos cómo se siente en nuestro centro pediátrico o alguna sugerencia para mejorar su experiencia. La tendremos en cuenta para que en su próxima visita lo sigamos recibiendo con los mejores estándares de atención. </p>
+									<p>En Sunrise queremos tener el mejor servicio. Cuéntenos cómo se siente en nuestro centro pediátrico o brindenos alguna sugerencia para mejorar su experiencia. La tendremos en cuenta para que en su próxima visita lo sigamos recibiendo con los mejores estándares de atención. </p>
 
 								<h3 class="title_second">FORMULARIO DE SUGERENCIAS</h3>
 									<div class="contentido_formulario">
