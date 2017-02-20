@@ -80,10 +80,41 @@
 
 
 .cloud_footer {
-    background: url("../images/cloud_footer2.png") no-repeat scroll top right rgba(0, 0, 0, 0);
+    /*background: url("../images/cloud_footer2.png") no-repeat scroll top right rgba(0, 0, 0, 0);*/
+    background: transparent url("../images/cloud_footer2.png") no-repeat scroll right top / 100% 102%;
     height: 515px;
     position: absolute;
     right: 0;
     top: 57px;
     width: 312px;
+}
+
+
+.fono {
+    margin: 0;
+    @include min-screen($tablet-l) {
+     margin: 5px 0 0;
+    }
+    span {
+      display:block;
+      text-align:center;
+      font-size:15px;
+      margin:0 0 10px 0;
+      @include min-screen($tablet-l) {
+       margin:0;
+      }
+    }
+}
+
+
+.fixed-fono {
+    background: white none repeat scroll 0 0;
+    bottom: 0;
+    padding: 8px;
+    position: fixed;
+    width: 100%; 
+    display:block;
+    @include min-screen($tablet-l) {
+       display:none;
+    }
 }
