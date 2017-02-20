@@ -68,4 +68,8 @@ $(document).ready(function(){
     $('.flexslider').flexslider({
     });
 
+    $("#contact_form").validate();
+
 });
+
+
