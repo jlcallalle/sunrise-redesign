@@ -4108,7 +4108,7 @@ body {
 
 .wrapper {
   overflow: hidden;
-  margin-bottom: 100px; }
+  margin-bottom: 53px; }
   @media screen and (min-width: 830px) {
     .wrapper {
       margin-bottom: 0; } }
@@ -5387,13 +5387,14 @@ a.verpost {
     .fono {
       margin: 5px 0 0; } }
   .fono span {
-    display: block;
+    display: inline-block;
     text-align: center;
     font-size: 15px;
-    margin: 0 0 10px 0; }
+    width: 33%; }
     @media screen and (min-width: 830px) {
       .fono span {
-        margin: 0; } }
+        display: block;
+        width: auto; } }
 
 .fixed-fono {
   background: white none repeat scroll 0 0;
@@ -5401,7 +5402,8 @@ a.verpost {
   padding: 8px;
   position: fixed;
   width: 100%;
-  display: block; }
+  display: block;
+  padding: 18px 8px; }
   @media screen and (min-width: 830px) {
     .fixed-fono {
       display: none; } }

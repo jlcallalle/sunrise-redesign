@@ -96,12 +96,19 @@
      margin: 5px 0 0;
     }
     span {
-      display:block;
+      display:inline-block;
       text-align:center;
       font-size:15px;
-      margin:0 0 10px 0;
+      width:33%;
       @include min-screen($tablet-l) {
-       margin:0;
+       display:block;
+       width: auto;
+      }
+
+      a {
+        &:hover {
+          //text-decoration:none;
+        }
       }
     }
 }
@@ -114,7 +121,9 @@
     position: fixed;
     width: 100%; 
     display:block;
+    padding: 18px 8px;
     @include min-screen($tablet-l) {
        display:none;
     }
 }
+
